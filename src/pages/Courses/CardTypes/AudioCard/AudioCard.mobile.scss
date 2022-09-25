@@ -1,0 +1,19 @@
+.lesson-cards__audio-type {
+    header {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    .course-layout &__heading {
+        margin-bottom: 15px;
+        text-align: center;
+
+        & > h1 {
+            font-size: 18px;
+        }
+
+        & > h3 {
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.question {
+    &-card {
+        & > div {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        & > .input-stack {
+            & > div {
+                & > .bd {
+                    transform: translateY(38px);
+                }
+            }
+        }
+        .options {
+            display: flex;
+            width: 100%;
+            & > div {
+                flex-grow: 1;
+                &:not(:first-child) {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    &-form {
+        width: 100%;
+
+        input[name="question"] {
+            width: 100%;
+        }
+
+        &__options {
+            margin-top: 15px;
+
+            & > b {
+                display: block;
+                margin: 0 0 12px 24px;
+            }
+
+            & > .input-stack > div {
+                & > div {
+                    display: flex;
+                    align-items: center;
+
+                    input {
+                        &[type="checkbox"] {
+                            margin-right: 10px;
+                        }
+
+                        &[type="text"] {
+                            width: 500px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.fill-gap-question {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+    & > select {
+        padding: 0 25px 0 2px;
+        line-height: 1;
+        height: 30px;
+        width: auto;
+        margin: 0 5px;
+    }
+    .select-answer {
+        margin: 0 3px;
+        font-style: italic;
+        text-decoration: underline;
+    }
+}
+
+.correct {
+    color: $black;
+}
+
+.incorrect {
+    color: $black;
+}

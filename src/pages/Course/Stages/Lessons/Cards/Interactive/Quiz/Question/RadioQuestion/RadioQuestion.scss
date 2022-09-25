@@ -1,0 +1,30 @@
+.radio-question {
+    & > p {
+        font-weight: bold;
+        .correct {
+            color: $black;
+        }
+        .incorrect {
+            color: $black;
+        }
+    }
+    & > div {
+        margin-left: 10px;
+        & > div {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            & > label {
+                margin-left: 20px;
+                margin-bottom: 0;
+            }
+        }
+        .radio-correct {
+            color: $black;
+            background-color: rgb(234, 250, 245);
+        }
+        .empty-radio {
+            margin-right: 15px;
+        }
+    }
+}

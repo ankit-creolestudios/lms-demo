@@ -1,0 +1,35 @@
+.navigation-chapter {
+    &:not(:last-child) {
+        border-bottom: 1px solid lighten($light-gray, 40%);
+    }
+    .chapter {
+        width: 100%;
+        padding: 15px 15px;
+        min-height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        > div {
+            > p {
+                margin-bottom: 0;
+            }
+
+            > p:first-child {
+                margin-bottom: 3px;
+                font-weight: bold;
+                color: darken($light-gray, 9.5);
+            }
+        }
+        i {
+            margin-left: 10px;
+            width: auto;
+            font-size: 22px;
+            color: lighten($light-gray, 36);
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($blue, 56%);
+        }
+    }
+}

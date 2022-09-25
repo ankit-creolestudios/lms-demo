@@ -1,0 +1,15 @@
+.question-slide {
+    position: relative;
+    overflow-y: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 900px) {
+    @import './QuestionMobile.slide.scss';
+}
+
+.preview-wrapper.preview-wrapper--mobile {
+    @import './QuestionMobile.slide.scss';
+}

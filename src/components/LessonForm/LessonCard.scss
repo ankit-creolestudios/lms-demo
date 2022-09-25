@@ -1,0 +1,35 @@
+.admin-lesson-card-form {
+    .btn-plus {
+        color: orange;
+        font-weight: bolder;
+        background-color: white;
+        border: none;
+        &:hover {
+            background-color: rgb(230, 230, 230);
+        }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        transform: scale(1.5);
+        cursor: pointer;
+    }
+
+    .modal-90w {
+        width: 100%;
+        max-width: 80%;
+    }
+
+    .lesson-preview {
+        .modal-header {
+            background-color: $cyan;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .modal-90w {
+        max-width: calc(100% - 30px);
+    }
+}

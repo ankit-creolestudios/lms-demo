@@ -1,0 +1,21 @@
+.alerts-container,
+.toasts-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+}
+.alerts-container {
+    align-items: center;
+}
+.toasts-container {
+    align-items: flex-end;
+    > .popup-toast {
+        &:first-child {
+            margin-top: 120px;
+        }
+    }
+}

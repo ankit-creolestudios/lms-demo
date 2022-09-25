@@ -1,0 +1,16 @@
+.package-list {
+    display: flex;
+    flex-direction: column;
+    // padding-left: 25px;
+    // align-items: center;
+    margin-bottom: 30px;
+
+    // @media screen and (max-width: 900px) {
+    //     padding: 0 25px;
+    // }
+
+    & > h2 {
+        color: $indigo-dye;
+        font-weight: bold;
+    }
+}

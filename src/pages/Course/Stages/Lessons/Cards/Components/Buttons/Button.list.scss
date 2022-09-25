@@ -1,0 +1,10 @@
+.button-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    // max-width: 30px;
+    width: 100%;
+    z-index: 100;
+}

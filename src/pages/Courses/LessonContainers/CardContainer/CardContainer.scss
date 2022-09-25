@@ -1,0 +1,371 @@
+@keyframes firstLoad {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes cardSwap {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.card-container__wrapper > main header:empty {
+    display: none;
+}
+
+.card-container .lesson-cards__theme-navy {
+    background-color: white;
+    color: #000;
+
+    & header,
+    div.single-question-card-component header {
+        background-color: #26265f;
+        color: #fff;
+    }
+}
+
+.card-container .lesson-cards__theme-green {
+    background-color: white;
+    color: #000;
+
+    & header,
+    div.single-question-card-component header {
+        background-color: #2fcca1;
+        color: #fff;
+    }
+}
+
+.lesson-cards__theme-lightGreen {
+    background-color: #ebfaf6;
+    color: #000;
+}
+
+.lesson-cards__theme-blue {
+    background-color: #a0d6ef;
+    color: #000;
+
+    header {
+        background-color: #a0d6ef;
+    }
+}
+
+.lesson-cards__theme-cyan {
+    background-color: #aceded;
+    color: #000;
+}
+
+.lesson-cards__theme-yellow {
+    background-color: #fef5c5;
+    color: #000;
+}
+
+.lesson-cards__theme-cinderalla {
+    background-color: #fde3d1;
+    color: #000;
+}
+
+.lesson-cards__theme-honeydew {
+    background-color: #ebfaf6;
+    color: #000;
+}
+
+.lesson-cards__theme-orange {
+    background-color: #ffd9a7;
+    color: #000;
+}
+
+.lesson-cards__theme-pink {
+    background-color: #ffbbb9;
+    color: #000;
+}
+
+.lesson-cards__theme-kobi {
+    background-color: #eca8d4;
+    color: #000;
+}
+
+.lesson-cards__theme-vanilla {
+    background-color: #eecee6;
+    color: #000;
+}
+
+.lesson-cards__theme-interactive {
+    background-color: #ebfaf6;
+    color: #000;
+
+    & header {
+        background-color: #26265f;
+        color: #fff;
+    }
+}
+
+.card-container {
+    $self: &;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 54px;
+    right: 0;
+    width: calc(100vw - $cmenu);
+    height: calc(100% - 54px);
+
+    @media screen and (max-width: 359px) {
+        & > div:not(.cmenu-toggle) {
+            opacity: 1;
+            transition: opacity 0.1s ease-out 0.2s;
+            pointer-events: auto;
+        }
+
+        &:not(#{$self}--menu-collapsed) > div:not(.cmenu-toggle) {
+            transition: opacity 50ms ease-out 0s;
+            pointer-events: none;
+            opacity: 0;
+        }
+    }
+
+    .cmenu-toggle {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @media screen and (max-width: 359px) {
+            position: fixed;
+            top: 48px;
+            left: unset;
+            right: 0;
+        }
+    }
+
+    &--animate {
+        transition: width 0.15s ease-out;
+    }
+
+    &--menu-collapsed {
+        width: 100vw;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+
+        & > header {
+            & > h3 {
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            & > h5 {
+                font-size: 16px;
+                color: $light-gray;
+            }
+        }
+
+        & > main {
+            height: 400px;
+            overflow-y: auto;
+            box-shadow: 0 0 10px rgba($brand-blue, 0.3);
+
+            --ck-color-image-caption-background: hsl(0, 0%, 97%);
+            --ck-color-image-caption-text: hsl(0, 0%, 20%);
+            --ck-image-style-spacing: 1.5em;
+            --ck-inline-image-style-spacing: calc(var(--ck-image-style-spacing) / 2);
+
+            @import '../../CKEditorContent.scss';
+
+            img,
+            figure {
+                max-width: 100%;
+            }
+
+            p {
+                word-break: break-word;
+            }
+            header {
+                > h1,
+                > h2,
+                > h3,
+                > h4,
+                > h5,
+                > h6,
+                > .h1,
+                > .h2,
+                > .h3,
+                > .h4,
+                > .h5,
+                > .h6 {
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        & > footer {
+            height: 75px;
+        }
+    }
+
+    &__progress {
+        height: 15px;
+        width: 100%;
+        background-color: lighten($brand-cyan, 35%);
+
+        & > div {
+            height: 100%;
+            background-color: $brand-cyan;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $brand-blue;
+        height: 60px;
+        color: $white;
+        font-size: 14px;
+        position: relative;
+
+        select {
+            appearance: none;
+            border: 0;
+            border-bottom: 1px solid $white;
+            background-color: transparent;
+            color: $white;
+            text-align: center;
+            text-align-last: center;
+            background-image: none;
+            width: auto;
+            border-radius: 0;
+            padding: 0;
+
+            option {
+                color: $brand-blue;
+                text-align: left;
+
+                &[disabled] {
+                    color: $light-gray;
+                }
+            }
+        }
+
+        .lesson-button {
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            height: 100%;
+            user-select: none;
+            cursor: pointer;
+            background-color: transparent;
+            transition: background-color 0.2s ease-out;
+            font-size: 14px;
+
+            &:hover {
+                background: lighten($brand-blue, 10%);
+            }
+
+            svg {
+                margin: 0 15px;
+                font-size: 11px;
+                transform: translateY(1px);
+            }
+
+            &--next {
+                top: 0;
+                padding-right: 0;
+            }
+
+            &--previous {
+                padding-left: 0;
+            }
+
+            &--disabled {
+                opacity: 0.5;
+
+                &:hover {
+                    background-color: transparent;
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 2px;
+        font-size: 14px;
+    }
+
+    &__timer {
+        margin-right: 5px;
+
+        span:last-child {
+            font-weight: bold;
+        }
+    }
+
+    &__badge {
+        text-transform: capitalize;
+        color: white;
+        transform: translateY(2px);
+        padding: 3px 15px;
+        text-decoration: underline;
+        cursor: pointer;
+
+        &--national {
+            background-color: $blue;
+        }
+
+        &--state {
+            background-color: $brand-red;
+        }
+    }
+
+    &--first_in {
+        #{$self}__wrapper > main {
+            opacity: 0;
+            transform: translateY(40px) scale(0.9);
+            animation: firstLoad 0.25s ease-out 0.25s 1 normal forwards;
+        }
+    }
+
+    &--next_in {
+        #{$self}__wrapper > main {
+            opacity: 1;
+            animation: cardSwap 0.35s ease-out;
+        }
+    }
+
+    &--previous_in {
+        #{$self}__wrapper > main {
+            opacity: 1;
+            animation: cardSwap 0.35s ease-out;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    @import './CardContainerMobile.scss';
+}
+
+.preview-wrapper.preview-wrapper--mobile {
+    @import './CardContainerMobile.scss';
+}

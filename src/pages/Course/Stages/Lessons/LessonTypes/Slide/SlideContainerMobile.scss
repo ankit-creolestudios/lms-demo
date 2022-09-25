@@ -1,0 +1,108 @@
+.slide-container {
+    $self: &;
+    width: 100vw;
+
+    align-items: flex-start;
+    top: 48px;
+    height: calc(100vh - 48px);
+
+    & > div:not(.cmenu-toggle) {
+        opacity: 1;
+        transition: opacity 0.1s ease-out 0.2s;
+        pointer-events: auto;
+    }
+
+    &:not(#{$self}--menu-collapsed) > div:not(.cmenu-toggle) {
+        transition: opacity 50ms ease-out 0s;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .cmenu__small-progress {
+        left: 48px;
+        top: 0;
+    }
+
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+
+        & > header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba($blue, 0.1);
+            position: relative;
+            height: 48px;
+
+            & > h3,
+            & > h5 {
+                display: block;
+                font-size: 14px;
+                color: $light-gray;
+                font-weight: normal;
+                margin: 0;
+                max-width: calc(100% - 220px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        & > main {
+            height: auto;
+            flex: 1;
+            box-shadow: none;
+        }
+
+        & > footer {
+            height: 53px;
+        }
+    }
+
+    &__progress {
+        height: 5px;
+    }
+
+    &__navigation {
+        height: 48px;
+    }
+
+    &__info {
+        position: absolute;
+        height: 48px;
+        top: -2px;
+        right: 0;
+    }
+
+    &__timer {
+        position: absolute;
+        right: 48px;
+
+        &:only-child {
+            right: 0;
+        }
+
+        span:first-child {
+            display: none;
+        }
+    }
+
+    &__badge {
+        line-height: 48px;
+        text-align: center;
+        padding: 0;
+        height: 48px;
+        width: 48px;
+        font-size: 0;
+        text-decoration: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &:first-letter {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.orderOverview {
+
+    border: 1px solid rgba(18, 18, 18, 0.2);
+    background-color: $white;
+    padding: 15px;
+    max-width: 25%;
+    width: 100%;
+    
+    & > div {
+        display: flex;
+
+        & > p:first-child {
+            margin-right: auto;
+        }
+    }
+}

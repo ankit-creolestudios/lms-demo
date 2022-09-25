@@ -1,0 +1,12 @@
+.table {
+    > .header {
+        > .col {
+            justify-content: flex-start;
+
+            > .col--sort {
+                margin-left: 0;
+                margin-right: 10px;
+            }
+        }
+    }
+}

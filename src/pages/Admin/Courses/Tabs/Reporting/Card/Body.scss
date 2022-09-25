@@ -1,0 +1,37 @@
+.rf-field-card-body {
+    .card-body {
+        padding: 20px 0px;
+        display: flex;
+        .targets {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            @media screen and (max-width: 1600px) {
+                width: 50%;
+            }
+            .target {
+                display: flex;
+                &:not(:first-child) {
+                    margin-top: 10px;
+                }
+                button {
+                    margin-left: 10px;
+                    &.selected {
+                        border-color: $light-gray;
+                        border-width: 3px;
+                        margin: -1px -1px -1px 9px;
+                    }
+                }
+            }
+        }
+        .source-options-container {
+            margin-left: 5%;
+            width: 60%;
+            padding: 0 20px;
+            @media screen and (max-width: 1600px) {
+                margin-left: 0px;
+                width: 50%;
+            }
+        }
+    }
+}

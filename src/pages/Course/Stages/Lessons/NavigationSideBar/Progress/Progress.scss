@@ -1,0 +1,32 @@
+.navigation-progress {
+    display: grid;
+    grid-template-columns: 84px calc(100% - 84px);
+    background-color: lighten($blue, 54.5%);
+    padding: 15px 0;
+    font-size: 14px;
+
+    & > svg {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        width: 54px;
+        height: 54px;
+        margin: 0 auto;
+        transition: width 0.15s ease-out, height 0.15s ease-out;
+
+        .CircularProgressbar {
+            &-trail {
+                stroke: lighten($brand-cyan, 33.2%);
+            }
+
+            &-path {
+                stroke: $brand-blue;
+            }
+
+            &-text {
+                font-size: 1.6rem;
+                font-weight: bold;
+                fill: $brand-blue;
+            }
+        }
+    }
+}

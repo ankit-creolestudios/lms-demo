@@ -1,0 +1,58 @@
+.permission-groups {
+    margin-bottom: 10px;
+
+    .permission-group-list {
+        .active {
+            background-color: #eef8fa;
+            border: 1px solid rgba(47, 204, 161, 0.5);
+            color: black;
+        }
+        .permission-group-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+
+            i {
+                cursor: pointer;
+            }
+            .fa-solid {
+                margin-left: 10px;
+            }
+            .permission-group-item-details {
+                display: flex;
+                align-items: center;
+
+                h6 {
+                    margin: 0 0 0 15px;
+                    text-transform: capitalize;
+                }
+            }
+            .permission-group-item-actions {
+                display: flex;
+                align-items: center;
+                i {
+                    margin: 0 10px;
+                }
+            }
+        }
+        .permission-group-item-button {
+            cursor: pointer;
+        }
+    }
+    .permission-group-add-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        h6 {
+            margin: 0;
+            padding: 5px 10px;
+        }
+        &:hover {
+            color: black;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.admin-layout {
+    display: flex;
+    height: calc(100vh - 54px);
+
+    & > menu {
+        max-width: 220px;
+    }
+
+    & > main {
+        flex: 1;
+        overflow: auto;
+        scroll-padding: 30px;
+        background-color: $cyan;
+
+        .admin-wrapper {
+            margin: 0 auto;
+        }
+    }
+    .app-version {
+        text-align: center;
+        margin: 10px,
+    }
+    
+}
+
+.li_admin {
+    margin-left: 0;
+}

@@ -1,0 +1,101 @@
+.info-comments {
+    margin: 0 0.75rem;
+
+    & > svg {
+        color: rgba(darken($brand-cyan, 40%), 0.5);
+        font-size: 1.25rem;
+        margin-top: 0.25rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &.info-comments__active {
+        & > svg {
+            color: $brand-red;
+        }
+    }
+}
+
+.info-comments__comment {
+    hr {
+        margin: 0.7rem 0 0.5rem 0;
+    }
+
+    textarea {
+        height: 8rem;
+        font-size: 0.9rem;
+    }
+
+    .bp {
+        margin-left: 0.5rem;
+    }
+}
+
+.info-comments__comment__buttons {
+    display: flex;
+    justify-content: flex-end;
+
+    & > .bd,
+    & > .bp {
+        margin-top: 0.5rem;
+        padding: 0.3rem 0.5rem;
+        font-size: 0.9rem;
+        line-height: 1;
+        margin-bottom: 0;
+    }
+}
+
+.info-comments__comment__text {
+    font-size: 0.85rem;
+    margin-bottom: 0.35rem;
+}
+
+.info-comments__comment__info {
+    display: flex;
+    align-items: center;
+
+    span {
+        font-size: 0.75rem;
+        color: $light-gray;
+        margin: 0 0.35rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            color: $gray;
+        }
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: 0;
+        color: $light-gray;
+        border-radius: 1rem;
+        font-size: 1rem;
+        padding: 0.25rem;
+        margin-left: 0.25rem;
+
+        &:hover {
+            background-color: lighten($light-gray, 30%);
+            color: $gray;
+        }
+
+        &:first-of-type {
+            margin-left: auto;
+        }
+
+        &:last-of-type {
+            font-size: 0.8rem;
+        }
+    }
+}

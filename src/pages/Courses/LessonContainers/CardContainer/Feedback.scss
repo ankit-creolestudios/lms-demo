@@ -1,0 +1,116 @@
+.card-container__feedback {
+    $self: &;
+
+    position: relative;
+    height: 60px;
+    background-color: $incorrect-orange;
+
+    @media screen and (max-width: 900px) {
+        height: 48px;
+    }
+
+    &--correct {
+        background-color: lighten($brand-cyan, 10%);
+    }
+
+    &__header {
+        background-color: inherit;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        align-items: center;
+        height: 100%;
+        z-index: 1;
+
+        & > h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+
+            @media screen and (max-width: 900px) {
+                font-size: 16px;
+            }
+        }
+
+        .lesson-button {
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: $brand-blue;
+            color: white;
+            height: 34px;
+            padding: 0 20px;
+            font-weight: bold;
+            border-radius: 22px;
+            transition: background-color 0.2s ease-out, color 0.2s ease-out, border-color 0.2s ease-out;
+            border: 3px solid transparent;
+
+            &:hover {
+                border-color: $brand-blue;
+                color: $brand-blue;
+                background-color: transparent;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__content {
+        position: absolute;
+        background-color: inherit;
+        bottom: 60px;
+        transition: transform 0.2s ease-out;
+        transform: translateY(10%);
+        width: 100%;
+        padding-top: 20px;
+
+        @media screen and (max-width: 900px) {
+            bottom: 48px;
+        }
+
+        & > main {
+            padding: 0 20px 20px 20px;
+            opacity: 0;
+            transition: opacity 0.2s ease-out;
+            overflow: hidden;
+            pointer-events: none;
+            transform-origin: bottom;
+            display: none;
+            max-height: calc(100vh - 220px);
+            overflow-y: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        #{$self}--expanded & {
+            transform: translateY(0px);
+
+            & > main {
+                opacity: 1;
+                height: auto;
+                pointer-events: auto;
+                display: block;
+                transition: opacity 0.2s ease-out;
+            }
+        }
+    }
+
+    &__toggle {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border-radius: 15px;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: inherit;
+        cursor: pointer;
+
+        svg {
+            transform: translateY(3px);
+        }
+    }
+}

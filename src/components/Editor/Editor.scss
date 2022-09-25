@@ -1,0 +1,35 @@
+.editor-wrapper {
+    padding-bottom: 30px;
+    &__toolbar {
+        position: relative;
+        z-index: 100;
+    }
+
+    .ck.ck-toolbar {
+        border-bottom-width: 0;
+        border-radius: 0.25rem 0.25rem 0 0;
+        transition: transform 0.1s ease-out;
+        transform: translateY(0px);
+    }
+
+    & > .ck.ck-content {
+        &.ck-rounded-corners {
+            background-color: $white;
+            border: 1px solid $black;
+            border-radius: 0 0 0.25rem 0.25rem;
+        }
+    }
+
+    .ck-editor__editable {
+        min-height: 200px;
+    }
+
+    .ckeditor-char-counter {
+        position: absolute;
+        margin-top: 10px;
+        right: 45px;
+        font-weight: bold;
+        font-size: 16px;
+        font-style: italic;
+    }
+}

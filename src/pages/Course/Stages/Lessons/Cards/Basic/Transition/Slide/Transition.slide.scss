@@ -1,0 +1,114 @@
+.transition-slide{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 180px;
+        $i: &;
+
+        & > div > .file-image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            padding: 0 !important;
+
+            svg {
+                font-size: 4rem;
+            }
+        }
+
+        & > .transition-card-with-background-image::after {
+            background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 45%, rgba(255, 255, 255, 0.5) 100%);
+        }
+
+        & > div::after {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .icon,
+        .content {
+            position: relative;
+            z-index: 3;
+        }
+
+        .icon {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        .content {
+            overflow-y: auto;
+            & > p:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .top {
+            flex-direction: column;
+
+            #{$i}__icon {
+                margin-bottom: 10px;
+            }
+
+            // #{$i}__content {
+            //     text-align: center;
+            // }
+        }
+
+        .bottom {
+            flex-direction: column-reverse;
+
+            #{$i}__icon {
+                margin-top: 10px;
+            }
+
+            // #{$i}__content {
+            //     text-align: center;
+            // }
+        }
+
+        .left {
+            #{$i}__icon {
+                margin-right: 10px;
+            }
+
+            // #{$i}__content {
+            //     flex: 1;
+            // }
+        }
+
+        .right {
+            flex-direction: row-reverse;
+
+            #{$i}__icon {
+                margin-left: 10px;
+            }
+
+            #{$i}__content {
+                flex: 1;
+                // text-align: right;
+            }
+        }
+    
+}
+
+@media screen and (max-width: 900px) {
+    @import './TransitionMobile.slide.scss';
+}
+
+.preview-wrapper.preview-wrapper--mobile {
+    @import './TransitionMobile.slide.scss';
+}

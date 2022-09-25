@@ -1,0 +1,20 @@
+.mnemonic-row {
+    width: 100%;
+
+    & + .bd.add {
+        transform: translateY(12px);
+
+        & + .bd {
+            transform: translateY(12px);
+        }
+    }
+
+    .input-stack > div {
+        max-width: calc(100% - 20px);
+        padding-right: 0;
+    }
+}
+
+.mnemonic-item {
+    max-width: calc(100% - 20px);
+}

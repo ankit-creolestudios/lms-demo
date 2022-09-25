@@ -1,0 +1,38 @@
+@import '../CalendarSharedStyles.scss';
+
+.calendar-legend {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin-bottom: 10px;
+    .calendar-legend-item {
+        display: flex;
+        align-items: center;
+        &.disabled {
+            .icon-container,
+            > span {
+                opacity: 0.4;
+            }
+        }
+        .icon-container {
+            @extend %default-icon;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 22px;
+            height: 22px;
+            &:hover {
+                cursor: pointer;
+            }
+            i {
+                font-size: 80%;
+            }
+        }
+        > span {
+            margin: 0 20px 0 10px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+}

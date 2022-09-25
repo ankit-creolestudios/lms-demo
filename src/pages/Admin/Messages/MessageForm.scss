@@ -1,0 +1,65 @@
+#messages {
+	.form {
+		.row {
+			&:not(:first-child) {
+				margin-top: 1rem;
+			}
+
+			.form__field {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.form-with-variables {
+	display: flex;
+
+	.form {
+		flex: 1;
+	}
+
+	.sticky-variables {
+		width: 18rem;
+		padding-left: 2rem;
+		padding-top: 2rem;
+
+		ul {
+			padding: 0;
+			list-style: none;
+		}
+
+		nav {
+			background-color: $very-light-gray;
+			border-radius: 0.25rem;
+			padding: 0.5rem 0;
+
+			& > div {
+				padding: 0 1rem;
+
+				small {
+					color: $light-gray;
+					font-style: italic;
+				}
+			}
+
+			& > ul {
+				& > li {
+					b {
+						display: block;
+						padding: 0.5rem 1rem;
+					}
+
+					li {
+						padding: 0.25rem 1.25rem;
+						cursor: pointer;
+
+						&:hover {
+							color: $brand-cyan;
+						}
+					}
+				}
+			}
+		}
+	}
+}

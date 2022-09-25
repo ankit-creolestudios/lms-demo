@@ -1,0 +1,32 @@
+.base-question-card-component {
+    position: relative;
+    overflow-y: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+
+    .check-answer-container {
+        @extend %center-content;
+        margin: 20px 0;
+        height: 50px;
+
+        button {
+            text-align: center;
+            padding: 5px 35px;
+            background-color: #2fcca1;
+            color: #000;
+            border: 2px solid #2fcca1;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    @import './BaseQuestionCardMobile.scss';
+}
+
+.preview-wrapper.preview-wrapper--mobile {
+    @import './BaseQuestionCardMobile.scss';
+}

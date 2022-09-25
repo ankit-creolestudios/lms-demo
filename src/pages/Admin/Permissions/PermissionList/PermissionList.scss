@@ -1,0 +1,19 @@
+.permission-list {
+    padding-top: 1rem;
+    position: sticky;
+    top: 0;
+    .permission-list-container {
+        background-color: white;
+        border: 1px solid lightgray;
+        padding: 10px 20px;
+        border-radius: 4px;
+        .active {
+            color: red;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+    }
+}

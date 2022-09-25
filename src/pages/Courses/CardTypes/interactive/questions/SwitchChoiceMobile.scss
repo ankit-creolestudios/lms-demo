@@ -1,0 +1,20 @@
+.switch-choice {
+    & > header {
+        & > h1 {
+            font-size: 24px;
+        }
+
+        & > h3 {
+            font-size: 20px;
+        }
+    }
+
+    &__question-block {
+        flex-direction: column;
+    }
+
+    &__options {
+        margin: 10px 10px 10px 10px;
+        width: 280px;
+    }
+}

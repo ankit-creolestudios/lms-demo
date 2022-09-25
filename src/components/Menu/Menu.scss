@@ -1,0 +1,63 @@
+$menuBackground: #fff;
+
+.side-menu {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: $menuBackground;
+	float: left;
+	border-right: solid 2px #f0f0f0;
+
+	.side-menu__items {
+		display: flex;
+		flex-direction: column;
+		flex: 1 0;
+		background-color: $menuBackground;
+		overflow: hidden auto;
+	}
+
+	.side-menu__item {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		height: 54px;
+		text-decoration: none;
+		width: 220px;
+		transition: width .25s, color .25s ease-out;
+
+		& > svg {
+			display: flex;
+			justify-content: center;
+			width: 54px;
+		}
+
+		& > span {
+			width: calc(100% - 54px);
+			overflow: hidden;
+			white-space: nowrap;
+		}
+	}
+
+	.side-menu__toggle {
+		user-select: none;
+		cursor: pointer;
+		text-align: right;
+		padding: .75rem 1rem;
+		background-color: darken($menuBackground, 10%);
+		font-size: .75rem;
+	}
+
+	&.side-menu--collapsed {
+
+		.side-menu__item {
+			width: 54px;
+
+			& > span {
+				transition: font-size 0s linear .25s;
+				font-size: 0;
+			}
+		}
+	}
+}

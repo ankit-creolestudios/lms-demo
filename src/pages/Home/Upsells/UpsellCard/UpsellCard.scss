@@ -1,0 +1,98 @@
+.upsell-card {
+    width: 100%;
+    max-width: 800px;
+    min-width:600px;
+    border-radius: 20px;
+    background-color: $white;
+    margin: 25px 0 25px 0;
+    display: flex;
+    padding: 30px;
+
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+    }
+    @media screen and (max-width: 600px) {
+        min-width:300px;
+    }
+    @media screen and (max-width: 900px) and (min-width: 600px){
+        min-width:460px;
+    }
+    @media screen and (max-width: 1200px) and (min-width: 900px){
+        min-width:380px;
+    }
+    
+
+    .image {
+        margin-right: 25px;
+        max-width: 25%;
+        width: 100%;
+        object-fit: contain;
+        object-position: top;
+
+        @media screen and (max-width: 500px) {
+            max-width: 100%;
+        }
+    }
+
+    .image {
+        width: 100px;
+        max-height: 150px;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    .content {
+        width: 100%;
+        h2 {
+            padding-bottom: 20px;
+            border-bottom: solid 1px $mid-gray;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: $stratos;
+            font-size: 1.5rem;
+        }
+
+        div {
+            padding-top: 10px;
+            font-family: 'Open Sans', sans-serif;
+            white-space: pre-line;
+        }
+
+        > a {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-width: 150px;
+            background-color: $brand-cyan;
+            border-radius: 100px;
+            margin-left: auto;
+            font-size: 20px;
+            padding: 0 30px;
+            width: fit-content;
+            margin-top: 10px;
+            cursor: pointer;
+            &:link,
+            &:visited {
+                color: $white;
+                // font-weight: bold;
+            }
+
+            &:hover {
+                background-color: $brand-cyan-light;
+
+                &:link,
+                &:visited {
+                    color: $brand-blue;
+                }
+            }
+
+            @media screen and (max-width: 1200px) {
+                font-size: 16px;
+                min-width: 100px;
+                height: 40px;
+            }
+        }
+    }
+}

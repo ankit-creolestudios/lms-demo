@@ -1,0 +1,16 @@
+.course-proctoring {
+    position: absolute;
+    z-index: 1000;
+    top: $header-height;
+    left: 0;
+    height: calc(100vh - $header-height);
+    width: 100vw;
+    background-color: $light-opaque-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 900px) {
+        top: $mobile-header-height;
+        height: calc(100vh - $mobile-header-height);
+    }
+}

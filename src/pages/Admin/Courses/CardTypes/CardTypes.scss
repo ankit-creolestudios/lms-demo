@@ -1,0 +1,56 @@
+.card-types {
+    &__item {
+        overflow-y: scroll;
+
+        &>div {
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+
+            &>ul {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    flex: 1;
+
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                    }
+
+                    label+input[type="color"] {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        label {
+            font-weight: bold;
+            margin: 0 0 5px 3px;
+        }
+
+        &>.bd {
+            margin: 5px;
+            padding: 1px 0;
+            width: calc(100% - 20px);
+            cursor: pointer;
+        }
+
+        &__extras {
+            margin-top: 20px;
+
+            &>div[class^="collaps"] {
+                padding: 0 10px 10px 10px;
+
+                &>main {
+                    &>div {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

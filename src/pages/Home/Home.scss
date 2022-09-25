@@ -1,0 +1,44 @@
+.home {
+    min-height: calc(100vh - $header-height);
+    background-color: $cyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .banner-container {
+        min-height: 30px;
+        max-width: 1625px;
+        margin: 0 25px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 1625px) {
+            max-width: calc(100% - 50px);
+        }
+    }
+    .package-upsells {
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // @media screen and (max-width: 900px) {
+        //     grid-template-columns: 1fr;
+        // }
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin: 0 25px;
+
+        & > div:first-child {
+            margin-right: 25px;
+        }
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            align-items: center;
+
+            & > div:first-child {
+                margin-right: 0px;
+            }
+        }
+    }
+}

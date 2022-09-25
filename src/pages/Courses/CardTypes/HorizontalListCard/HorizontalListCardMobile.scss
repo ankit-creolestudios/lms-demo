@@ -1,0 +1,18 @@
+.lesson-cards__horizontal-list-type {
+    .headings {
+        & > h1 {
+            font-size: 24px;
+        }
+
+        & > h3 {
+            font-size: 20px;
+        }
+    }
+
+    .horizontal-list {
+        flex-direction: column;
+        .list-item {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+    padding: 13px;
+    height: 64px;
+}
+
+.admin-actions {
+    button,
+    a {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    div {
+        display: inline-block;
+    }
+}
+
+#breadcrumb {
+    display: flex;
+    font-size: 1.15rem;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+
+    li {
+        display: flex;
+        align-items: center;
+        color: #000;
+
+        a {
+            display: inline-block;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: inherit;
+        }
+
+        & > svg {
+            color: #dadada;
+            width: 42px;
+            height: 24px;
+            fill: #dadada;
+            transform: scaleY(-1) rotate(-90deg);
+        }
+
+        &:last-child {
+            color: $black;
+            font-weight: bold;
+        }
+    }
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.cardHighlight {
+    -webkit-box-shadow: 0 0 10px orange;
+    -moz-box-shadow: 0 0 10px orange;
+    box-shadow: 0 0 10px orange;
+}
+
+#admin-content {
+    background-color: $cyan;
+    padding: 20px;
+}
+
+#admin-content .tab-content,
+.admin-modal .tab-content {
+    background-color: #fff;
+    padding: 0 26px 26px 26px;
+}
+
+.nav-item,
+.nav-link,
+.nav {
+    border: none;
+}
+
+.nav-item.active,
+.nav-link.active {
+    box-shadow: inset 0px 5px 0px #2fcca1;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+.nav-tabs .nav-link {
+    padding: 12px 40px 8px 40px;
+    border: 0;
+}
+
+#admin-content .table main .col,
+#admin-content .basic-stats dl {
+    background-color: #fff;
+}
+
+.admin-modal .modal-content {
+    background-color: rgb(243, 249, 253);
+}

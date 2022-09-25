@@ -1,0 +1,165 @@
+.questions-modal {
+    background-color: $white;
+
+    .modal-title {
+        background-color: $cyan;
+        padding: 1.2rem;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+        flex-wrap: unset;
+        justify-content: unset;
+        align-items: unset;
+
+        .bd,
+        .bp {
+            margin-bottom: 0;
+        }
+
+        & > div {
+            margin: 0;
+
+            &:last-child {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                & > button {
+                    margin: 0;
+                }
+
+                & > div:not(:first-child) {
+                    margin-left: 0;
+
+                    & > span:last-child {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .questions-modal--option {
+        padding: 0.5rem 0.5rem 0.5rem 2rem;
+        color: $black;
+        font-size: 1rem;
+        font-weight: normal;
+
+        &.questions-modal--option__chosen {
+            background-color: rgba($brand-blue, 0.1);
+
+            &::after {
+                content: " - Your answer";
+                font-style: italic;
+                font-weight: bold;
+            }
+        }
+
+        &.questions-modal--option__valid {
+            background-color: rgba($brand-cyan, 0.1);
+
+            &::after {
+                content: " - Correct answer";
+                font-style: italic;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .alert-heading {
+        font-weight: bold;
+    }
+
+    .modal-footer > div > div > span.nobold {
+        font-weight: 500;
+    }
+
+    .alert {
+        background-color: $cyan;
+        border-radius: 0;
+        border: 0;
+        border-left: 10px solid;
+        color: $black;
+
+        &.alert-warning {
+            border-color: $warning;
+        }
+
+        &.alert-success {
+            border-color: $brand-cyan;
+        }
+
+        .alert-heading {
+            color: $black;
+        }
+    }
+}
+
+.qm-timeout {
+    .bp {
+        margin-bottom: 0;
+    }
+
+    .modal-body {
+        font-size: 1.35rem;
+    }
+
+    background-color: rgba($brand-blue, 0.45);
+}
+
+.qm-leave {
+    background-color: rgba($brand-blue, 0.45);
+
+    .bd,
+    .bp {
+        margin-bottom: 0;
+    }
+}
+
+.qm-buttons {
+    display: flex;
+    align-items: center;
+
+    & > span {
+        margin: 0 1rem;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.1rem;
+        }
+    }
+}
+
+.kek {
+    max-width: 80vw;
+    width: 80vw;
+}
+
+.exam-info {
+    .modal-body {
+        padding-bottom: 2rem;
+    }
+
+    .modal-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        background-color: white;
+
+        & > div:last-child {
+            width: 100%;
+            max-width: 1110px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .questions-modal .modal-footer > div:last-child > div:first-child > div > span,
+    .questions-modal .modal-footer > div:last-child > div:nth-child(2) > span:first-child {
+        display: none;
+    }
+}

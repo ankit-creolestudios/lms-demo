@@ -1,0 +1,24 @@
+.inline-quiz {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    @media screen and (max-width: 800px) {
+        > h1 {
+            margin-left: 20px;
+        }
+    }
+    .questions {
+        padding: 0 25px 0 20px;
+    }
+    & > button {
+        border: 0;
+        outline: none;
+        background-color: $brand-cyan;
+        color: $white;
+        width: 50%;
+        border-radius: 5px;
+        height: 40px;
+        margin: 0 auto;
+    }
+}

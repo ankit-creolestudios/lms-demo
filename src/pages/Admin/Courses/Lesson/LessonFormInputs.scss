@@ -1,0 +1,35 @@
+.lesson-inputs {
+    display: grid;
+    grid-template-columns: repeat(4, 0.25fr);
+    gap: 20px;
+    padding-top: 20px;
+
+    div {
+        grid-column: span 1;
+
+        &:first-child {
+            grid-column: span 2;
+        }
+
+        &.lessonTypeComment {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+            textarea {
+                height: calc(100% - 24px - 0.5rem);
+            }
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        &.disabled {
+            label {
+                opacity: 0.75;
+            }
+        }
+    }
+}

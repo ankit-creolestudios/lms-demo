@@ -1,0 +1,63 @@
+.reporting-field-card {
+    div {
+        cursor: auto;
+    }
+    .rf-action {
+        @extend %center-content;
+        height: 30px;
+        width: 30px;
+        margin: 4px;
+        margin-left: 14px;
+        border-radius: 5px;
+        flex-shrink: 0;
+        &:hover {
+            background-color: $opaque-bg;
+            cursor: pointer;
+        }
+        &.confirm-wrapper {
+            background-color: $correct-green;
+            &:hover {
+                background-color: $opaque-bg;
+            }
+        }
+        &.cancel-wrapper {
+            background-color: $brand-red;
+            &:hover {
+                background-color: $opaque-bg;
+            }
+        }
+        &.delete-wrapper {
+            &:hover {
+                background-color: $brand-red;
+            }
+        }
+        &.move-wrapper {
+            &:hover {
+                background-color: transparent;
+                cursor: grab;
+                margin-left: 4px;
+            }
+        }
+    }
+    .field-header {
+        display: flex;
+        height: 56px;
+        width: 100%;
+        align-items: center;
+        padding: 0 10px;
+        cursor: pointer;
+        .fa-arrows-alt {
+            margin-left: 5px;
+            margin-right: 15px;
+            cursor: grab;
+        }
+        input {
+            width: 300px;
+        }
+        .rf-action {
+            &.delete-wrapper {
+                margin-left: auto;
+            }
+        }
+    }
+}

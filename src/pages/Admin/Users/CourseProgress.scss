@@ -1,0 +1,123 @@
+.bulk-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    select {
+        display: inline-block;
+        margin-left: auto;
+        max-width: 12rem;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 0.3rem;
+        width: 0.65rem;
+        height: 0.65rem;
+    }
+
+    .bd {
+        margin-bottom: 0;
+        margin-left: 1rem;
+        border-radius: 0.5rem;
+    }
+}
+
+.alignIconCenter {
+    display: flex;
+    align-items: center;
+}
+
+.table-tree {
+    border: 0;
+    input[type="checkbox"] {
+        margin-right: 0.65rem;
+        width: 0.65rem;
+        height: 0.65rem;
+    }
+
+    &.accordion {
+        .card {
+            border: 1px solid rgba($brand-cyan, 0.5);
+            border-radius: 0.3rem;
+
+            &:not(:last-child) {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    .card-header {
+        position: relative;
+        padding: 0;
+        background-color: rgba($brand-cyan, 0.03);
+
+        input[type="checkbox"] {
+            position: absolute;
+            top: 1.2rem;
+            left: 1rem;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            padding: 0.7rem;
+            padding-left: 2.3rem;
+        }
+
+        .btn,
+        .bp,
+        .bd {
+            background-color: transparent;
+            border: 0;
+            font-size: 1.1rem;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+
+    .col {
+        .bp {
+            margin-bottom: 0;
+            border-radius: 0.3rem;
+        }
+    }
+}
+
+.limitTitle {
+    display: flex;
+    align-items: center;
+
+    & > span {
+        overflow: hidden;
+        max-width: calc(100% - 9ch);
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.course-progress__last-attempts {
+    .last-attempts {
+        margin: 1rem;
+
+        & > h3 {
+            display: none;
+        }
+
+        &__items {
+            overflow-y: auto;
+        }
+    }
+
+    h3 {
+        margin: 0;
+        font-weight: bold;
+    }
+}
+
+.insert-link{
+    color:rgba($brand-cyan, 1);
+}

@@ -1,0 +1,46 @@
+.upsell-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    .upsell-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 45px 0px 38px 0px;
+        font-family: 'Poppins', sans-serif;
+
+        .logo {
+            width: 201px;
+            height: 26px;
+            margin-bottom: 36px;
+        }
+        .heading {
+            text-align: center;
+            color: $brand-blue;
+            font: normal normal 600 32px/40px Poppins;
+            max-width: 834px;
+            @include respond(phone) {
+                font-size: 20px;
+                line-height: 27px;
+                max-width: 334px;
+            }
+        }
+        .subheading {
+            font-size: 18px;
+            line-height: 25px;
+            color: $black;
+            text-align: center;
+            margin-top: 1rem;
+            font-family: 'Open Sans' sans-serif;
+
+            @include respond(phone) {
+                line-height: 30px;
+                max-width: 334px;
+            }
+        }
+    }
+}

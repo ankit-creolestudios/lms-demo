@@ -1,0 +1,60 @@
+.text-slide {
+    overflow-y: auto;
+    flex: 1;
+
+    & > .file-image {
+        float: left; // Cause the remaining elements to flow around the icon
+        margin-right: 30px; // some additional margin to the right to prevent bunching
+        margin-bottom: 20px; // some additional margin to the bottom to prevent bunching
+        margin-left: 20px;
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+    }
+
+    & > header {
+        display: flex;
+        flex-direction: column;
+
+        h1,
+        h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+
+        & > h1 {
+            font-weight: bold;
+            font-size: 18px;
+            padding: 20px 20px 0px;
+
+            &:only-child {
+                padding: 20px;
+                -webkit-line-clamp: 2;
+                margin-bottom: 0;
+            }
+        }
+
+        & > h3 {
+            font-size: 16px;
+            padding: 0 20px;
+            margin-bottom: 20px;
+
+            &:only-child {
+                padding: 20px 20px 20px;
+                -webkit-line-clamp: 2;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    & > div {
+        padding: 10px 20px 20px;
+        & > p:last-child {
+            margin: 0;
+        }
+    }
+}

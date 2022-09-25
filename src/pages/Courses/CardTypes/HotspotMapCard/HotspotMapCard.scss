@@ -1,0 +1,222 @@
+.lesson-cards__hotspot-map-type {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+
+    header {
+        h1,
+        h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+
+        & > h1 {
+            font-weight: bold;
+            font-size: 18px;
+            padding: 20px 20px 0px;
+
+            &:only-child {
+                padding: 20px 20px 10px;
+                -webkit-line-clamp: 2;
+            }
+        }
+
+        & > h3 {
+            font-size: 16px;
+            padding: 0 20px;
+            margin-bottom: 20px;
+
+            &:only-child {
+                padding: 20px;
+                -webkit-line-clamp: 2;
+            }
+        }
+    }
+
+    &__canvas {
+        display: flex;
+        overflow: hidden;
+        flex: 1;
+        cursor: move;
+
+        &:active {
+            cursor: grabbing;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba($very-light-gray, 0.9);
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.2s ease-out;
+            pointer-events: none;
+        }
+
+        &--active {
+            &::after {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        & > div {
+            display: flex;
+            flex: 1;
+            max-width: 100%;
+            position: relative;
+
+            & > .react-transform-wrapper {
+                max-height: 100%;
+                flex: 1;
+                position: relative;
+            }
+
+            img.canvas-img {
+                user-select: none;
+                pointer-events: none;
+                max-width: unset;
+            }
+
+            .hotspotIcon {
+                box-shadow: 0 0 15px #fff;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25px;
+                height: 25px;
+                background-color: $brand-blue;
+                border-radius: 50%;
+                cursor: pointer;
+                color: $white;
+                transition: transform 0.2s ease-out;
+
+                & > svg {
+                    pointer-events: none;
+                }
+
+                &--active {
+                    border: 4px solid $brand-cyan;
+                    background-color: $brand-cyan;
+                }
+
+                &__internal {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: $brand-blue;
+                    box-shadow: 0 0 0 4px $white;
+
+                    &--active {
+                        background-color: $brand-cyan;
+                    }
+                }
+            }
+        }
+
+        &--green {
+            & > div {
+                .hotspotIcon {
+                    background-color: $brand-cyan;
+
+                    &__internal {
+                        background-color: $brand-cyan;
+
+                        &--active {
+                            background-color: $brand-blue;
+                        }
+                    }
+
+                    &--active {
+                        border: 4px solid $brand-blue;
+                        background-color: $brand-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    &__popup {
+        position: absolute;
+        background: darken($very-light-gray, 10%);
+        border-top: 10px solid $brand-cyan;
+        padding: 15px;
+        top: 45px;
+        right: 15px;
+        width: 320px;
+        height: calc(100% - 60px);
+        box-shadow: 0 0 5px rgba($brand-blue, 0.3);
+        z-index: 2;
+
+        & > h1 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        & > span {
+            position: absolute;
+            right: 0;
+            top: -42px;
+            height: 22px;
+            width: 22px;
+            text-align: center;
+            line-height: 22px;
+            background-color: $brand-cyan;
+            border-radius: 11px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        & > div {
+            overflow-y: auto;
+            max-height: calc(100% - 30px);
+        }
+    }
+
+    &__hiding-info {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        padding: 2px 15px;
+        border-radius: 30px;
+        background-color: rgba($brand-blue, 0.5);
+        color: $white;
+        font-size: 13px;
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity 0.2s ease-out;
+        z-index: 2;
+        pointer-events: none;
+
+        svg {
+            margin-right: 3px;
+        }
+
+        &--right {
+            left: unset;
+            right: 15px;
+        }
+
+        &--hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    @import './HotspotMapCardMobile.scss';
+}
+
+.preview-wrapper.preview-wrapper--mobile {
+    @import './HotspotMapCardMobile.scss';
+}

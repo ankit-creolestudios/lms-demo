@@ -1,0 +1,42 @@
+.calendar-group {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    .group-container {
+        width: 100%;
+        > i {
+            margin-right: 10px;
+            font-size: 14px;
+            width: 12px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        > span {
+            font-size: 14px;
+            font-weight: 600;
+            &:hover {
+                cursor: pointer;
+            }
+            &.expanded::after {
+                content: '';
+                display: block;
+                width: 100%;
+                padding-bottom: 5px;
+                border-bottom: solid 2px $mid-gray;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .item-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    > .item-list {
+        margin-top: 20px;
+    }
+}

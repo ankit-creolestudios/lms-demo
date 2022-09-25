@@ -1,0 +1,39 @@
+.course-breadcrumb {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $cyan;
+    width: 100%;
+    font-weight: bold;
+    color: $black;
+    font-size: 0.875rem;
+    z-index: 1;
+
+    & > div {
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        align-items: center;
+        height: 48px;
+
+        @media screen and (max-width: 900px) {
+            padding: 0 15px;
+        }
+
+        & > svg {
+            color: rgba($light-gray, 0.5);
+            margin: 0 16px;
+            font-size: 1.5rem;
+        }
+
+        @media screen and (max-width: 900px) {
+            & > span {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: calc((100% - 53px) / 2);
+            }
+        }
+    }
+}

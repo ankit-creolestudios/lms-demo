@@ -1,0 +1,24 @@
+.reporting-inputs {
+    .buttons {
+        button:first-child {
+            margin-left: 10px;
+        }
+        button:not(:first-child) {
+            margin-left: 30px;
+        }
+        .toggle-input {
+            margin: 20px !important;
+        }
+    }
+    .header-toggle {
+        margin-left: 0;
+        label {
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+    }
+
+    .modal-dialog {
+        width: 500px;
+    }
+}

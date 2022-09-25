@@ -1,0 +1,26 @@
+.form-constructor {
+    & > header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10px calc(15px - 0.5rem) 10px;
+    }
+
+    &__preview {
+        .modal-body {
+            padding: 0;
+        }
+
+        .form-builder {
+            footer {
+                width: 100%;
+                position: sticky;
+            }
+
+            main {
+                height: unset;
+                padding: 15px 0;
+            }
+        }
+    }
+}

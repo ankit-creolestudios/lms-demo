@@ -1,0 +1,12 @@
+.upsells-list {
+    // padding-right: 25px;
+
+    @media screen and (max-width: 900px) {
+        // padding: 0 25px;
+    }
+
+    & > h2 {
+        color: $indigo-dye;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "navigationFallback": {
+      "rewrite": "/index.html",
+      "exclude": ["/static/*"]
+    },
+    "headers": {
+      "Referrer-Policy": "strict-origin-when-cross-origin"
+    }
+  }
+  

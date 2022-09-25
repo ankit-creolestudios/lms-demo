@@ -1,0 +1,43 @@
+.package-courses {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    border-top: solid 1px $mid-gray;
+    padding-top: 20px;
+    h4 {
+        font-weight: bold;
+    }
+    .view-courses-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 225px;
+        border-radius: 100px;
+        background-color: $indigo-dye;
+        border: none;
+        color: $white;
+        font-size: 20px;
+        padding: 0 30px;
+        &:hover {
+            background-color: $azure-white;
+        }
+        i {
+            font-size: 15px;
+            margin-left: 20px;
+        }
+        @media screen and (max-width: 1200px) {
+            font-size: 16px;
+            width: 175px;
+            height: 40px;
+            padding: 0 10px;
+            i {
+                margin-left: 10px;
+            }
+        }
+    }
+    .course-list {
+        width: 100%;
+    }
+}

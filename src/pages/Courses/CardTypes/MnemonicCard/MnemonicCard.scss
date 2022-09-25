@@ -1,0 +1,128 @@
+.lesson-cards__mnemonic-type {
+    position: relative;
+    height: 100%;
+
+    header {
+        h1,
+        h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+
+        & > h1 {
+            font-weight: bold;
+            font-size: 18px;
+            padding: 20px 20px 0px;
+
+            &:only-child {
+                padding: 20px;
+                -webkit-line-clamp: 2;
+                margin-bottom: 0;
+            }
+        }
+
+        & > h3 {
+            font-size: 16px;
+            padding: 0 20px 10px;
+
+            &:only-child {
+                padding: 20px 20px 20px;
+                -webkit-line-clamp: 2;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__content {
+        padding: 10px 20px;
+    }
+
+    &__rows {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        span {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            border: solid 2px $brand-blue;
+            border-radius: 50px;
+            &:hover {
+                cursor: pointer;
+                background-color: $brand-blue;
+                color: white;
+                transition: all 0.25s;
+            }
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        width: 475px;
+
+        & > img {
+            height: 95px;
+            width: 95px;
+            margin: 10px;
+            object-fit: contain;
+            padding: 3px;
+            border: 3px solid transparent;
+            transition: border-color 0.2s ease-out;
+
+            &.active {
+                border: 3px solid $brand-blue;
+            }
+        }
+    }
+
+    &__popup {
+        position: absolute;
+        background: darken($very-light-gray, 10%);
+        border-top: 10px solid $brand-cyan;
+        padding: 15px;
+        top: 45px;
+        right: 15px;
+        width: 320px;
+        height: calc(100% - 60px);
+        box-shadow: 0 0 5px rgba($brand-blue, 0.3);
+        z-index: 12;
+
+        & > h1 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        & > span {
+            position: absolute;
+            right: 0;
+            top: -42px;
+            height: 22px;
+            width: 22px;
+            text-align: center;
+            line-height: 22px;
+            background-color: $brand-cyan;
+            border-radius: 11px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        & > div {
+            height: 92%;
+            overflow-y: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    @import './MnemonicCardMobile.scss';
+}
+
+.preview-wrapper.preview-wrapper--mobile {
+    @import './MnemonicCardMobile.scss';
+}

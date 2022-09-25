@@ -1,0 +1,30 @@
+.heading-page {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        height: 50%;
+        min-height: 150px;
+        padding: 20px 25px 20px 20px;
+
+        h1 {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    & > div:not(.cardInfo__icon) {
+        img {
+            max-width: 100%;
+        }
+        padding: 20px;
+        & > p:last-child {
+            margin: 0;
+        }
+    }
+}

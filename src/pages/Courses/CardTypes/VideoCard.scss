@@ -1,0 +1,58 @@
+.lesson-cards__video-type {
+    display: flex;
+    padding: 20px;
+    height: 100%;
+
+    iframe {
+        flex-shrink: 0;
+        padding-right: 20px;
+
+        &:only-child {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .transcript {
+        height: 100%;
+        overflow-y: auto;
+        background-color: $very-light-gray;
+        padding: 10px;
+    }
+}
+
+.lesson-page .lesson-cards__video-type {
+    display: block;
+    padding: 20px;
+    height: 100%;
+
+    iframe {
+        flex-shrink: 0;
+        padding-right: 0;
+        padding-bottom: 20px;
+        width: 100%;
+
+        &:only-child {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .transcript {
+        max-height: 200px;
+        height: 100%;
+        overflow-y: auto;
+        background-color: $very-light-gray;
+        padding: 10px;
+    }
+}
+
+.lesson-page .lesson-cards__video-type__transcript {
+    max-height: 200px;
+}
+
+@media screen and (max-width: 900px) {
+    @import './VideoCardMobile.scss';
+}
+
+.preview-wrapper.preview-wrapper--mobile {
+    @import './VideoCardMobile.scss';
+}

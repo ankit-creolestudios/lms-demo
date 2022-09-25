@@ -1,0 +1,98 @@
+.lesson-preview {
+    &__page {
+        margin: 0 -26px;
+        width: calc(100% + 52px);
+
+        &__breadcrumb {
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            background-color: darken($cyan, 5);
+            width: 100%;
+            height: 48px;
+            font-weight: bold;
+            color: $black;
+            padding: 0 20px;
+            font-size: 0.875rem;
+
+            & > svg {
+                color: rgba($light-gray, 0.5);
+                margin: 0 16px;
+                font-size: 1.5rem;
+            }
+        }
+
+        &__content {
+            padding-bottom: 54px;
+            min-height: 100%;
+
+            & > main {
+                // margin-top: 20px;
+                max-width: $container-width;
+
+                &.lesson-cards {
+                    &__document-type {
+                        iframe {
+                            height: calc(100vh - 156px);
+                        }
+                    }
+
+                    &__image-type {
+                        height: auto;
+
+                        &--bg {
+                            height: 400px;
+                        }
+                    }
+
+                    &__video-type {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .lesson-cards__video-type__transcript {
+                            margin-top: 20px;
+                            height: 235px;
+                            width: 532px;
+                            padding: 20px;
+                        }
+                    }
+
+                    &__endofchapter-quiz-type {
+                        margin-left: 20px;
+                    }
+
+                    main {
+                        .last-attempts__items {
+                            & .last-attempts__item {
+                                padding: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .lesson-status {
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            padding: 3px 0 5px 0;
+            color: white;
+            text-transform: capitalize;
+            text-decoration: underline;
+            font-size: 0.9375rem;
+
+            &.lesson-status--national {
+                background-color: $blue;
+            }
+
+            &.lesson-status--state {
+                background-color: $brand-red;
+            }
+        }
+    }
+}

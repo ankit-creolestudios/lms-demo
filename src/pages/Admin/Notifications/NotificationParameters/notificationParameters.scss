@@ -1,0 +1,18 @@
+.notification-parameters{
+    position: sticky;
+    top: 10px;
+    .notification-parameters-container{
+        background-color: white;
+        border: 1px solid lightgray;
+        padding: 10px 20px;
+        border-radius: 4px;
+        .active {
+            color: red;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+    }
+}

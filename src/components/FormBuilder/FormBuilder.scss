@@ -1,0 +1,94 @@
+.form-builder {
+    position: relative;
+    height: 100%;
+  
+
+    main {
+        overflow-y: auto;
+        height: calc(100vh - 96px);
+        scroll-padding-top: 80px;
+
+        &:not(:first-child) {
+            & > div {
+                padding-top: 64px;
+            }
+        }
+
+        & > div {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 60px;
+
+            & > div {
+                margin: 10px 0;
+
+                .SingleDatePicker {
+                    max-width: 300px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            padding: 0 15px;
+        }
+    }
+
+    footer {
+        display: flex;
+        background-color: white;
+        height: 54px;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid darken($very-light-gray, 10);
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+
+        @media screen and (max-width: 900px) {
+            height: 48px;
+        }
+    }
+
+    &__checkboxInput {
+        display: flex;
+        align-items: center;
+        
+        input {
+            margin-right: 8px;
+            margin-left: 16px;
+        }
+    }
+
+    &__textInput,
+    &__numberInput
+     {
+        small {
+            display: block;
+            transform: translateY(-5px);
+        }
+    }
+
+    &__optionsInput,
+    &__radioInput {
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        label {
+            &:not(:first-child) {
+                margin-left: 16px;
+            }
+        }
+    }
+}
+
+small {
+    display: block;
+    transform: translateY(-5px);
+}
+
+label{
+    margin-bottom:0;
+}

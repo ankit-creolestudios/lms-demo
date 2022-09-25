@@ -1,0 +1,19 @@
+.hotspotlist {
+    &__item {
+        width: 100%;
+
+        & > div {
+            &:not(:first-child) {
+                margin-top: 15px;
+            }
+        }
+
+        .editor-wrapper {
+            max-width: 800px;
+
+            .ck-editor__editable {
+                min-height: 100px;
+            }
+        }
+    }
+}

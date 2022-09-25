@@ -1,0 +1,55 @@
+.hotspot-map {
+    &__modal {
+        & > .modal-dialog {
+            max-width: 800px;
+
+            .modal-body {
+                padding: 15px;
+                box-sizing: border-box;
+
+                & > div {
+                    position: relative;
+                    max-width: 100%;
+
+                    & > img {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .modal-footer {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__node {
+        position: absolute;
+        background-color: $brand-blue;
+        border: 2px solid $white;
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        box-shadow: 0 0 5px 1px rgba($brand-blue, 0.5);
+    }
+}
+
+#node-popover {
+    width: 325px;
+    .popover-body {
+        max-height: 50vh;
+        textarea {
+            height: 120px;
+        }
+        svg {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+        }
+    }
+}

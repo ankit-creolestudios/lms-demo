@@ -1,0 +1,16 @@
+.proctoring-search-result {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+    width: 100%;
+    text-overflow: ellipsis;
+    &:not(:last-child) {
+        border-bottom: solid 1px $mid-gray;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: $brand-cyan-light;
+        text-decoration: underline;
+    }
+}

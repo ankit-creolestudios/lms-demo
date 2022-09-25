@@ -1,0 +1,253 @@
+.lesson-page {
+    position: relative;
+    flex: 1;
+    max-width: calc(100vw - #{$cmenu});
+    transform: translateX($cmenu);
+    overflow-y: auto;
+    height: calc(100vh - 54px);
+
+    &__breadcrumb {
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        background-color: $cyan;
+        width: 100%;
+        height: 48px;
+        font-weight: bold;
+        color: $black;
+        padding: 0 20px;
+        font-size: 0.875rem;
+
+        & > svg {
+            color: rgba($light-gray, 0.5);
+            margin: 0 16px;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__content {
+        padding-bottom: 54px;
+        min-height: 100%;
+
+        & > main {
+            // margin-top: 20px;
+            max-width: $container-width;
+
+            &.lesson-cards {
+                &__document-type {
+                    iframe {
+                        height: calc(100vh - 156px);
+                    }
+                }
+
+                &__image-type {
+                    height: auto;
+
+                    &--bg {
+                        height: 400px;
+                    }
+                }
+
+                &__video-type {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .lesson-cards__video-type__transcript {
+                        margin-top: 20px;
+                        height: 235px;
+                        width: 532px;
+                        padding: 20px;
+                    }
+                }
+
+                &__endofchapter-quiz-type {
+                    margin-left: 20px;
+                }
+
+                main {
+                    .last-attempts__items {
+                        & .last-attempts__item {
+                            padding: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .base-question-card-component {
+            height: unset;
+            overflow-y: unset;
+        }
+    }
+
+    &__footer {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-top: 1px solid darken($very-light-gray, 10);
+        background-color: white;
+        height: 54px;
+        z-index: 100;
+
+        & > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            padding: 0 20px;
+            max-width: $container-width;
+        }
+
+        .lesson-timer {
+            color: $black;
+
+            span:last-child {
+                font-weight: bold;
+            }
+        }
+
+        .lesson-button {
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            height: 34px;
+            user-select: none;
+            cursor: pointer;
+            background-color: $mid-gray;
+            border-radius: 20px;
+            color: $black;
+            transition: background-color 0.2s ease-out;
+            font-size: 14px;
+            font-weight: bold;
+
+            &:hover {
+                background: lighten($mid-gray, 5%);
+            }
+
+            svg {
+                display: none;
+            }
+
+            &--next {
+                right: 20px;
+                background-color: $brand-cyan;
+
+                &:hover {
+                    background-color: lighten($brand-cyan, 15%);
+                }
+            }
+
+            &--previous {
+                left: 20px;
+            }
+
+            &--disabled {
+                background-color: lighten($mid-gray, 10%);
+                opacity: 0.8;
+
+                &:hover {
+                    background-color: lighten($mid-gray, 10%);
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    &__button {
+        &--hidden {
+            display: none;
+        }
+
+        &--disabled {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+    }
+
+    .cmenu-toggle {
+        display: none;
+    }
+
+    .lesson-status {
+        text-align: center;
+        width: 100%;
+        max-width: 800px;
+        padding: 3px 0 5px 0;
+        color: white;
+        text-transform: capitalize;
+        text-decoration: underline;
+        font-size: 0.9375rem;
+
+        &.lesson-status--national {
+            background-color: $blue;
+        }
+
+        &.lesson-status--state {
+            background-color: $brand-red;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    @import "./PageContainerMobile.scss";
+}
+
+@media screen and (max-width: 359px) {
+    .course-layout.page-layout {
+        .cmenu--page {
+            transform: translateX(-100vw);
+
+            &--open {
+                transform: translateX(0);
+            }
+        }
+
+        .lesson-page {
+            $self: &;
+
+            &--menu-open {
+                position: absolute;
+                z-index: 11;
+                height: 48px;
+                top: unset;
+                bottom: 0;
+
+                & > .lesson-page__header,
+                & > .lesson-page__content {
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0s ease-out 0s;
+                }
+
+                & > .lesson-page__footer {
+                    border-color: transparent;
+
+                    & > div {
+                        & > div:not(.cmenu-toggle) {
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+
+                        & > .cmenu-toggle {
+                            transform: none;
+                            position: fixed;
+                            bottom: 0;
+                            right: 0;
+                            left: unset;
+                            top: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

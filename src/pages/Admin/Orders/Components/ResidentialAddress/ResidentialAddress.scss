@@ -1,0 +1,21 @@
+.residentialAddress {
+
+    padding: 15px;
+    border: 1px solid rgba(18, 18, 18, 0.2);
+    background-color: $white;
+    max-width: 25%;
+    width: 100%;
+
+    h2 {
+        font-size: 18px;
+    }
+
+    &>div {
+        display: flex;
+
+        &>p:first-child {
+            font-weight: bold;
+            margin-right: auto;
+        }
+    }
+}

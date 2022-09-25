@@ -1,0 +1,27 @@
+.lesson-cards__mnemonic-type {
+    position: relative;
+    height: 100%;
+
+    &__header {
+        & > h1 {
+            font-size: 24px;
+        }
+
+        & > h3 {
+            font-size: 20px;
+        }
+    }
+    &__row {
+        width: 250px;
+
+        & > img {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+        }
+    }
+
+    &__popup {
+        width: calc(100% - 30px);
+    }
+}

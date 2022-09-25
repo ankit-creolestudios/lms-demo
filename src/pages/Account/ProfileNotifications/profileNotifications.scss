@@ -1,0 +1,19 @@
+.profile-notifications{
+    margin-top: 20px;
+    .profile-notification-card{
+        min-height: 70px;
+        margin: 10px 0;
+        .profile-notification-card-col{
+            background-color: $azure-white;
+            border: 1px solid black;
+            height: 100%;
+            min-height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h5,p{
+                margin: 0;
+            }
+        }
+    }
+}

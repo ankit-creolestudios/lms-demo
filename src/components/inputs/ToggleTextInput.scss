@@ -1,0 +1,22 @@
+.toggle-text-input-component {
+    display: flex;
+    align-items: center;
+
+    & > input[type="text"] {
+        display: inline-block;
+        width: unset;
+
+        &:read-only {
+            border: 0;
+            background-color: transparent;
+            font-weight: bold;
+            outline: none;
+        }
+    }
+
+    & > svg {
+        font-size: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}

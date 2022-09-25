@@ -1,0 +1,15 @@
+header {
+    > h1,
+    h2 {
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 1; /* number of lines to show */
+        // -webkit-box-orient: vertical;
+
+        // &:only-child {
+        //     -webkit-line-clamp: 2;
+        //     margin-bottom: 0;
+        // }
+    }
+}

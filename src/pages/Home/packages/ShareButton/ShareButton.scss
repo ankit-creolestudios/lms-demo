@@ -1,0 +1,19 @@
+.home-share-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $indigo-dye;
+    color: $white;
+    border: 0;
+    border-radius: 20px;
+    width: 34px;
+    height: 34px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    &:hover {
+        background-color: $azure-white;
+        color: darken($indigo-dye, 25%);
+    }
+    & > i {
+        transform: translateX(-1px);
+    }
+}

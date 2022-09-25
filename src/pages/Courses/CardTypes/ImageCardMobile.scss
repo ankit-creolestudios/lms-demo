@@ -1,0 +1,50 @@
+.lesson-cards__image-type {
+    height: 100%;
+    &:not(.lesson-cards__image-type--bg) {
+        grid-template-rows: 120px calc(100% - 120px);
+        grid-template-columns: unset;
+    }
+
+    .lesson-cards__image-type__image {
+        height: 100%;
+        background-color: $white;
+    }
+
+    &__content {
+        header {
+            & > h1 {
+                font-size: 24px;
+            }
+
+            & > h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &--bg {
+        .lesson-cards__image-type__content {
+            width: 100%;
+        }
+
+        .lesson-cards__image-type__image {
+            height: 100%;
+            width: 100%;
+        }
+
+        &::after {
+            background-image: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.95) 30%,
+                rgba(255, 255, 255, 0.75) 55%,
+                rgba(255, 255, 255, 0.5) 95% rgba(255, 255, 255, 0) 100%
+            );
+        }
+    }
+
+    &--right {
+        .lesson-cards__image-type__image {
+            grid-column: 1;
+        }
+    }
+}

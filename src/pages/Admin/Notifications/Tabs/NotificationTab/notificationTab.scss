@@ -1,0 +1,21 @@
+.notification-tab {
+    padding-top: 20px;
+}
+
+.search-bar {
+    border: '1px solid';
+    background: '#f5fafd';
+    padding: '5px 8px';
+    font-size: '15px';
+    margin: '0 0 10px 10px';
+    cursor: pointer;;
+    margin-top: '20px';
+}
+
+.method-icon-container{
+    display: flex;
+    justify-content: flex-start;
+    .method-icon{
+        margin-right: 10px;
+    }
+}

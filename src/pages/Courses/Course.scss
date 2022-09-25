@@ -1,0 +1,54 @@
+.dev-container {
+    @extend %center-content;
+    .dev-wrapper {
+        height: 400px;
+        width: 800px;
+        overflow-y: auto;
+        text-align: left;
+        border: 5px solid blue;
+    }
+}
+
+.course-layout {
+    &.page-layout {
+        height: 100%;
+    }
+
+    .lesson-content {
+        & > div > main {
+            --ck-color-image-caption-background: hsl(0, 0%, 97%);
+            --ck-color-image-caption-text: hsl(0, 0%, 20%);
+            --ck-image-style-spacing: 1.5em;
+            --ck-inline-image-style-spacing: calc(var(--ck-image-style-spacing) / 2);
+
+            @import "./CKEditorContent.scss";
+
+            img,
+            figure {
+                max-width: 100%;
+            }
+
+            p {
+                word-break: break-word;
+            }
+        }
+    }
+}
+
+.final-exam-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 15px;
+
+    & > a {
+        width: 100%;
+    }
+
+    &.disabled {
+        & > a {
+            pointer-events: none;
+            opacity: 0.5;
+            user-select: none;
+        }
+    }
+}

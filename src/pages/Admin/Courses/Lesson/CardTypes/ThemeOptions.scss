@@ -1,0 +1,44 @@
+.color-select {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__option {
+        height: 26px;
+        width: 26px;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 1px 1px 3px 2px lighten($brand-blue, 65%);
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &--active {
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                z-index: 1;
+                box-shadow: 1px 1px 3px 2px lighten($brand-blue, 65%), inset 0 0 0 2px $black, inset 0 0 0 4px $white;
+            }
+        }
+
+        &--header {
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 55%;
+                background-color: white;
+                border-radius: 0 0 8px 8px;
+            }
+        }
+    }
+}

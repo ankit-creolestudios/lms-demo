@@ -1,0 +1,144 @@
+.document-slide .document-type {
+    display: flex;
+    flex-direction: column;
+
+    iframe {
+        height: calc(100vh - 156px);
+        max-height: 750px;
+        width: 100%;
+        max-width: 600px;
+        border: 0;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+        background-color: white !important;
+        & > header {
+            width: 100%;
+
+            h1,
+            h3 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1; /* number of lines to show */
+                -webkit-box-orient: vertical;
+            }
+
+            & > h1 {
+                font-weight: bold;
+                font-size: 18px;
+                padding: 20px 20px 0px;
+
+                &:only-child {
+                    padding: 20px;
+                    -webkit-line-clamp: 2;
+                    margin-bottom: 0;
+                }
+            }
+
+            & > h3 {
+                font-size: 16px;
+                padding: 0 20px 10px;
+
+                &:only-child {
+                    padding: 20px 20px 20px;
+                    -webkit-line-clamp: 2;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        & > div {
+            padding: 10px 20px 20px;
+            font-size: 14px;
+            @media screen and (min-width: 900px) {
+                font-size: 16px;
+            }
+        }
+        button {
+            margin: auto auto 0 auto;
+
+            svg {
+                margin-left: 10px;
+            }
+
+            + a {
+                display: block;
+                margin: 10px auto 0 auto;
+            }
+        }
+        a.text-link,
+        a.text-link:visited,
+        a.text-link:focus {
+            color: #666 !important;
+            font-size: 14px;
+            text-decoration: none !important;
+            margin-bottom: 20px;
+        }
+        .document-modal-container {
+            @extend %center-content;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 999;
+            width: 100vw;
+            height: 98vh;
+            transform: translate(-50%, -43%);
+            background-color: hsla(0, 0%, 75%, 0.8);
+            .document-modal {
+                width: 1000px;
+                height: 86vh;
+                background-color: white;
+                border-radius: 10px;
+                header {
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 15px;
+                    svg {
+                        margin-left: auto;
+                        transform: scale(1.3);
+                        &:hover {
+                            cursor: pointer;
+                            transform: scale(1.5);
+                        }
+                    }
+                }
+                div {
+                    display: flex;
+                    justify-content: center;
+                    iframe {
+                        height: calc(86vh - 70px);
+                        max-height: 800px;
+                        width: 100%;
+                        max-width: 600px;
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.document-card-modal {
+    .modal-body {
+        padding: 0;
+        height: 80vh;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    @import "./DocumentMobile.slide.scss";
+}
+
+.preview-wrapper.preview-wrapper--mobile {
+    @import "./DocumentMobile.slide.scss";
+}

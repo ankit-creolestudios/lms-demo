@@ -1,0 +1,25 @@
+@keyframes blink {
+    0%,
+    100% {
+        color: rgba($light-gray, 0.5);
+    }
+    50% {
+        color: $light-gray;
+    }
+}
+
+.file-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > svg {
+        color: $light-gray;
+    }
+
+    &.loading {
+        svg {
+            animation: blink 5s ease-out infinite;
+        }
+    }
+}

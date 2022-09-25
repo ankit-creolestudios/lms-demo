@@ -1,0 +1,174 @@
+.course-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    min-width: 150px;
+    border-radius: 100px;
+    background-color: $indigo-dye;
+    border: none;
+    color: $white;
+    font-size: 20px;
+    padding: 0 30px;
+    &:hover {
+        background-color: $azure-white;
+    }
+    @media screen and (max-width: 1800px) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 1200px) {
+        font-size: 16px;
+        min-width: 100px;
+        height: 40px;
+    }
+}
+
+.extension-course-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    min-width: 150px;
+    border-radius: 100px;
+    background-color: $incorrect-orange;
+    border: none;
+    color: $white;
+    font-size: 20px;
+    padding: 0 30px;
+    &:hover {
+        background-color: $correct-green;
+        color: $white
+    }
+    @media screen and (max-width: 1800px) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 1200px) {
+        font-size: 16px;
+        min-width: 100px;
+        height: 40px;
+    }
+}
+.certificate-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    min-width: 150px;
+    border-radius: 100px;
+    border: none;
+    color: $white;
+    font-size: 20px;
+    padding: 0 30px;
+    &:hover {
+        background-color: $azure-white;
+    }
+    @media screen and (max-width: 1800px) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 1200px) {
+        font-size: 16px;
+        min-width: 100px;
+        height: 40px;
+    }
+}
+
+.resale-options {
+    .modal-content {
+        height: 80%;
+        max-height: unset;
+    }
+    .modal-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        header{
+            color: $brand-blue;
+            font-size: 35px;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+        }
+        .modal-instruction{
+            width: 60%;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            @media (max-width: 1360px){
+                width: 90%;
+                text-align: center;
+            }
+        }
+        .modal-offer-container{
+            width: 95%;
+            background-color: #f3f9fc;
+            height: fit-content;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            .modal-offer-row{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                .modal-offer-details{
+                    flex: 0.35;
+                    margin-right: 20px;
+                    .course-title{
+                        color: $brand-blue;
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    .course-detail-options{
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        @media (max-width: 1600px){
+                            grid-template-columns: repeat(1, 1fr);
+                        }
+                        .course-detail-option{
+                            width: max-content;
+                            text-transform: capitalize;
+                        }
+                    }                    
+                }
+                .model-offer-options{
+                    flex: 0.7;
+                    margin-bottom: 10px;
+                    label{
+                        font-size:16px;
+                        span{
+                            font-weight: 700;
+                            color: $brand-blue;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img {
+        height: 30px;
+        margin: 10px;
+    }
+    .option-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 1266px;
+        background-color: #f0f8ff;
+        border-radius: 15px;
+        padding: 60px 90px;
+    }
+    .option-list {
+        list-style: none;
+    }
+    .footer {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,42 @@
+.notification-form{
+    .notification-setup{
+        margin-bottom: 20px;
+        .form__field{
+            margin-bottom: 10px;
+            .label-container{
+                display: flex;
+                label{
+                    margin-right: 10px;
+                }
+                .mode-switch{
+                    .custom-control-input:checked~.custom-control-label::before {
+                        background-color: $brand-cyan;
+                    }
+                    label{
+                        &::before {
+                            background-color: $mid-dark-gray;
+                            border: 0;
+                        }
+                    }
+                }
+            }
+            .sendMethod-form{
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .form-check{
+                    margin-right: 10px;
+                    .form-check-label{
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .notification-content{
+        .form__field{
+            margin-bottom: 10px;
+        }
+    }
+}

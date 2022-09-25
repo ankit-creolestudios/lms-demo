@@ -1,0 +1,19 @@
+.source-options {
+    position: relative;
+    padding: 30px 10px;
+    border-radius: 5px;
+    box-shadow: $box-shadow-default;
+    .fa-times {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        font-size: large;
+        &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+    label {
+        margin-top: 5px;
+    }
+}

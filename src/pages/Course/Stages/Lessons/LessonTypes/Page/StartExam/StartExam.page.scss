@@ -1,0 +1,17 @@
+.exam-button {
+    max-width: 180px !important;
+    background-color: $brand-cyan;
+    &:hover {
+        background: lighten($brand-cyan, 10);
+    }
+
+    &-disabled {
+        background-color: $brand-cyan-light;
+        opacity: 0.8;
+
+        &:hover {
+            background-color: lighten($brand-cyan-light, 10);
+            cursor: default;
+        }
+    }
+}

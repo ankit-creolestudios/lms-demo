@@ -1,0 +1,137 @@
+.question-slide {
+    .lesson-preview__container > main > & {
+        padding: 0;
+    }
+
+    > header {
+
+        & > h1 {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px 20px 0 20px;
+            @media screen and (max-width: 900px) {
+                font-size: 18px;
+            }
+
+            &:only-child {
+                padding-bottom: 20px;
+            }
+
+            & + h3 {
+                padding-top: 0;
+            }
+        }
+
+        & > h3 {
+            font-size: 20px;
+            padding: 20px;
+            @media screen and (max-width: 900px) {
+                font-size: 16px;
+            }
+        }
+    }
+    .boolean-answers {
+        .content {
+            padding: 10px 15px 0 15px;
+        }
+
+        .questions {
+            @extend %center-content-vertical-top;
+
+            // flex-flow: row wrap;
+            padding: 10px;
+            box-sizing: border-box;
+
+            .question {
+                position: relative;
+                display: flex;
+                // width: calc(50% - 20px);
+                width: 100%;
+                min-height: 90px;
+                background-color: hsl(195, 53%, 93%);
+                margin: 5px 10px;
+                @media screen and (max-width: 900px) {
+                    width: calc(100% - 20px);
+                }
+                .result {
+                    position: absolute;
+                    @extend %center-content;
+                    width: 20px;
+                    height: 100%;
+                    svg {
+                        display: none;
+                    }
+                    &.correct,
+                    &.incorrect {
+                        svg {
+                            display: block;
+                        }
+                    }
+                    &.correct {
+                        background-color: $brand-cyan;
+                    }
+                    &.incorrect {
+                        background-color: $incorrect-orange;
+                    }
+                }
+                .content {
+                    display: flex;
+                    // flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 10px 20px;
+
+                    @media screen and (max-width: 900px) {
+                        flex-direction: column;
+                        align-items: initial;
+                    }
+
+                    span {
+                        // margin-bottom: 10px;
+                        font-weight: 600;
+                        text-align: left;
+                    }
+                    .options {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 20px;
+
+                        @media screen and (max-width: 400px) {
+                            // flex-direction: column;
+                        }
+
+                        .option {
+                            border-radius: 50px;
+                            background-color: #dadada;
+                            border: 2px solid #dadada;
+                            height: 33px;
+                            width: 150px;
+                            font-weight: 600;
+
+                            @media screen and (max-width: 400px) {
+                                // margin: 10px;
+                            }
+
+                            &.selected {
+                                border: 2px solid $brand-blue;
+                            }
+                            &:first-child {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    @import "./BooleanAnswerMobile.scss";
+}
+
+.preview-wrapper.preview-wrapper--mobile {
+    @import "./BooleanAnswerMobile.scss";
+}

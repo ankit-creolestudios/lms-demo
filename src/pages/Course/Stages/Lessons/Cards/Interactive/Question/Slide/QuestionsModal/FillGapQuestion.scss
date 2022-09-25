@@ -1,0 +1,13 @@
+.fillGapQuestion {
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+
+    select {
+        padding: 0 25px 0 2px;
+        line-height: 1;
+        height: 30px;
+        width: auto;
+        margin: 0 2px;
+    }
+}

@@ -1,0 +1,23 @@
+.menu-popup {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    background-color: $white;
+    border-radius: 10px;
+    min-width: 200px;
+    max-width: 350px;
+    z-index: 997;
+    transition: opacity 0.2s ease-out;
+    box-shadow: 2px 2px 10px rgba($black, 0.2);
+
+    &--open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .spinner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

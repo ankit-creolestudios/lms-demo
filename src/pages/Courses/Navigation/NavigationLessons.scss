@@ -1,0 +1,111 @@
+.cmenu {
+    &__lesson {
+        $self: &;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        cursor: pointer;
+
+        @at-root {
+            span#{&} {
+                cursor: default;
+            }
+        }
+
+        &:not(:last-child) {
+            #{$self}-icon {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -30px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    background-color: darken($very-light-gray, 10);
+                    height: 30px;
+                    width: 1px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -30px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    background-color: $brand-cyan;
+                    height: 30px;
+                    z-index: 1;
+                    width: 1px;
+                    transition: transform 0.5s ease-out;
+                    transform-origin: 0 0;
+                    transform: scaleY(0);
+                }
+            }
+        }
+
+        &-icon {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: darken($very-light-gray, 10);
+            color: darken($light-gray, 9.5);
+            margin-right: 38px;
+            margin-left: 15px;
+            font-size: 1.2rem;
+
+            & > svg {
+                margin: auto;
+            }
+        }
+
+        & > span {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            width: calc(100% - 100px);
+        }
+
+        &--active {
+            #{ $self }-icon {
+                background-color: $brand-cyan;
+                color: $black;
+
+                &::before {
+                    transform: scaleY(1);
+                }
+            }
+
+            &:not(:last-child) {
+                #{ $self }-icon {
+                    &::before {
+                        transform: scaleY(1);
+                    }
+                }
+            }
+        }
+
+        &--complete {
+            #{ $self }-icon {
+                background-color: lighten($brand-cyan, 40);
+                color: darken($brand-cyan, 15);
+
+                &::before {
+                    transform: scaleY(1);
+                }
+            }
+
+            &:not(:last-child) {
+                #{ $self }-icon {
+                    &::before {
+                        transform: scaleY(1);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.exam-info {
+    & > div:first-child {
+        padding: 1rem;
+        background-color: $cyan;
+        width: 100%;
+    }
+}

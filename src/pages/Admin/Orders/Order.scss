@@ -1,0 +1,24 @@
+.order {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    button {
+        height: 40px;
+        border: 1px solid rgba(18, 18, 18, 0.2);
+        background-color: $white;
+        outline: none;
+        min-width: 120px;
+    }
+}
+
+.packageWrapper, .paymentWrapper {
+    margin-top: 30px;
+    border: 1px solid rgba(18, 18, 18, 0.2);
+    background-color: $white;
+    padding: 15px;
+
+    h2 {
+        font-size: 18px;
+    }
+}

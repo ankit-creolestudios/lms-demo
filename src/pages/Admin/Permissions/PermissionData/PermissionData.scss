@@ -1,0 +1,51 @@
+.permission-modal-container {
+    justify-content: center;
+    .permission-modal-content {
+        width: 50%;
+        button {
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
+.permission-data {
+    scroll-behavior: smooth;
+    .btn {
+        float: right;
+        margin: 0px 5px;
+        &:hover {
+            color: black;
+        }
+    }
+    .permission-data-accordion {
+        border: 1px solid rgba(47, 204, 161, 0.5);
+        border-radius: 0.3rem;
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+        .permission-data-accordion-toggle {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            background-color: rgba(47, 204, 161, 0.03);
+            border-bottom: 1px solid lightgrey;
+            .accordion-header-title {
+                margin-left: 10px;
+                text-transform: capitalize;
+            }
+        }
+        .permission-data-accordion-collapse {
+            background-color: white;
+            padding: 20px;
+            .accordion-body-permission {
+                display: flex;
+                .severity-warn {
+                    color: red;
+                }
+                .accordion-body-permission-title {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

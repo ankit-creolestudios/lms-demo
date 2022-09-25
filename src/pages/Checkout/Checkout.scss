@@ -1,0 +1,361 @@
+.checkout {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        & > .heading {
+            text-align: center;
+            color: $brand-blue;
+            font: normal normal 600 32px/40px Poppins;
+            max-width: 834px;
+            margin-bottom: 30px;
+            @include respond(phone) {
+                margin-top: 30px;
+                font-size: 20px;
+                max-width: 95%;
+                width: 100%;
+                line-height: 27px;
+            }
+        }
+    }
+    &-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        max-width: 1266px;
+        background-color: $light-blue;
+        border-radius: 15px;
+        padding: 60px 90px;
+        @media screen and (max-width: 900px) {
+            padding: 60px 45px;
+        }
+        @media screen and (max-width: 750px) {
+            padding: 40px 10px;
+            width: 95%;
+        }
+        h1 {
+            font: normal normal 600 30px Poppins;
+            color: $brand-blue;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        h3 {
+            font: normal normal 600 18px 'Open Sans';
+            color: $black;
+            text-align: center;
+        }
+        h6 {
+            font-size: 18px;
+            text-align: center;
+            max-width: 620px;
+            & > span {
+                font-weight: bold;
+            }
+        }
+        button {
+            display: flex;
+            align-items: center;
+            background-color: $indigo-dye;
+            font-size: 26px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: $white;
+            padding: 14px 90px;
+            border: 0;
+            border-radius: 45px;
+            @include respond(phone) {
+                width: 100%;
+                padding: 14px 0;
+                justify-content: center;
+            }
+            &.dark {
+                background-color: $madison;
+            }
+            &.light-blue {
+                background-color: $cornflower-blue;
+            }
+            &.light {
+                background-color: $gallery;
+                color: $stratos;
+            }
+            &.sm {
+                font-size: 18px;
+                padding: 14px 30px;
+            }
+        }
+        & > button {
+            margin-top: 65px;
+        }
+    }
+    &-form {
+        display: flex;
+        max-width: 740px;
+        width: 100%;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        > div > .login-link {
+            color: $black;
+            text-decoration: underline;
+            font-style: normal;
+            font-size: large;
+            cursor: pointer;
+        }
+        > div {
+            margin: 10px 2.5%;
+            max-width: 45%;
+            width: 100%;
+        }
+        input[type='text'],
+        input[type='email'],
+        select {
+            background: $white;
+            border: 0;
+            border-radius: 0;
+            padding: 20px 25px;
+        }
+        .full-width {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        @include respond(phone) {
+            width: 100%;
+            > div {
+                margin: 10px 2.5%;
+                max-width: 95%;
+                width: 100%;
+            }
+        }
+        > div {
+            > p {
+                margin-top: 5px;
+                color: $red;
+                font-size: 14px;
+                font-style: italic;
+            }
+        }
+    }
+    &-contact,
+    &-address,
+    &-billing,
+    &-payment {
+        margin-top: 65px;
+    }
+    &-payment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        width: 100%;
+        label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            input[type='checkbox'] {
+                width: 13px;
+                height: 13px;
+                margin-right: 3px;
+                border-radius: 0;
+            }
+        }
+        &__options {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 40px;
+            max-width: 100%;
+            width: 100%;
+            > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            @media screen and (max-width: 1000px) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &__options > &__or {
+            flex-direction: row;
+            font-size: 24px;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0;
+            font-weight: 500;
+            height: 70px;
+            margin: 0 50px;
+        }
+        &__card {
+            > span {
+                display: block;
+                text-align: center;
+                width: 100%;
+                max-width: 380px;
+                font-size: 14px;
+                margin-top: 20px;
+            }
+        }
+        &__paypal {
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            max-width: 380px;
+            height: 55px;
+            > .paypal {
+                max-width: 380px;
+                width: 100%;
+            }
+        }
+        &__badges {
+            display: flex;
+            justify-content: center;
+            margin-top: 45px;
+            & > div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                width: 145px;
+                height: 45px;
+                border-radius: 2px;
+                & > img {
+                    height: 22px;
+                }
+                & > svg {
+                    margin-right: 5px;
+                    font-size: 20px;
+                }
+            }
+            @media screen and (max-width: 350px) {
+                flex-direction: column;
+                align-items: center;
+                & > div {
+                    margin: 10px;
+                    & > svg {
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+        &__stripe {
+            font-size: 11px;
+            background-color: $ebony-clay;
+            margin-right: 10px;
+            font-weight: 600;
+        }
+        &__ssl {
+            background-color: $victoria;
+            font-size: 11px;
+            text-transform: uppercase;
+            & > div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                line-height: 11px;
+                & > span {
+                    font-weight: bold;
+                }
+            }
+        }
+        .cards-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            img {
+                height: 24px;
+            }
+        }
+    }
+    &-upsells {
+        background-color: $white;
+        border-radius: 15px;
+        padding: 50px;
+        margin-top: 50px;
+        width: 100%;
+        @media screen and (max-width: 600px) {
+            padding: 20px;
+        }
+        &__item {
+            display: flex;
+            &:not(:last-child) {
+                margin-bottom: 65px;
+            }
+            & > img {
+                object-fit: cover;
+                height: 150px;
+                width: 110px;
+                border-radius: 3px;
+            }
+            & > div {
+                margin-left: auto;
+                max-width: 285px;
+                width: 100%;
+                button {
+                    width: 100%;
+                    justify-content: center;
+                }
+                & > div {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    margin-top: 10px;
+                    color: $ebony-clay;
+                    & > svg {
+                        font-size: 28px;
+                    }
+                }
+            }
+            @media screen and (max-width: 1000px) {
+                flex-direction: column;
+                align-items: center;
+                & > div {
+                    button {
+                        margin: 15px 0;
+                    }
+                    margin: 0;
+                }
+            }
+        }
+        &__price {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0 8px;
+        }
+        &__oldPrice {
+            font-size: 24px;
+            color: $red;
+            text-decoration: line-through;
+        }
+        &__discount {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        &__itemData {
+            margin-left: 25px;
+            max-width: 390px;
+            h1 {
+                font-size: 22px;
+                color: $black;
+                font-weight: medium;
+                text-align: left;
+            }
+            span {
+                font-size: 16px;
+            }
+            @media screen and (max-width: 1000px) {
+                text-align: center;
+
+                h1 {
+                    text-align: center;
+                }
+            }
+        }
+        &__header {
+            margin-top: 65px;
+        }
+    }
+}

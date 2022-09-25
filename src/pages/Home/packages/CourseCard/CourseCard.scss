@@ -1,0 +1,75 @@
+.course-card {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    min-width:400px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 20px;
+    background-color: $white;
+    margin: 12.5px 0 12.5px 0;
+    padding: 50px 30px 10px 30px;
+    @media screen and (max-width: 600px) {
+        min-width:300px;
+    }
+    @media screen and (max-width: 900px) and (min-width: 600px){
+        min-width:460px;
+    }
+    @media screen and (max-width: 1200px) and (min-width: 900px){
+        min-width:380px;
+    }
+    .course-contents {
+        display: flex;
+        .image {
+            width: 100px;
+            max-height: 150px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+        .description {
+            padding-left: 30px;
+            h3 {
+                padding-bottom: 20px;
+                border-bottom: solid 1px $mid-gray;
+                margin-bottom: 15px;
+                font-weight: bold;
+                color: $stratos;
+                font-size: 1.5rem;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            .image {
+                width: 60px;
+            }
+        }
+        @media screen and (max-width: 1200px) and (min-width: 900px), screen and (max-width: 700px) {
+            .description {
+                > h3 {
+                    font-size: 22px;
+                }
+                > div {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .course-controls {
+        margin-top: 30px;
+        border-top: solid 1px $mid-gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        .course-button {
+            width: fit-content;
+        }
+        .extension-course-button {
+            width: fit-content;
+        }
+    }
+    .home-share-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}

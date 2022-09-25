@@ -1,0 +1,59 @@
+.popup-toast {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 25px 0 0 25px;
+    min-height: 45px;
+    width: 350px;
+    padding: 0px 5px;
+    transition: opacity 250ms ease-in-out;
+    opacity: 0;
+    pointer-events: auto;
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &.success {
+        color: $success;
+        background-color: $success;
+    }
+    &.error {
+        color: $error;
+        background-color: $error;
+    }
+    &.warning {
+        color: $warning;
+        background-color: $warning;
+    }
+    &.info {
+        color: $info;
+        background-color: $info;
+    }
+    .icon {
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        flex-shrink: 0;
+        .fa-exclamation-triangle {
+            font-size: 20px;
+            transform: translate(-1px, -1px);
+        }
+        .fa-info-circle {
+            font-size: 28px;
+        }
+    }
+    span {
+        margin: 3px 10px;
+        padding-right: 5px;
+        color: white;
+        font-weight: bold;
+    }
+}

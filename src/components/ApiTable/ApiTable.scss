@@ -1,0 +1,32 @@
+/* Tackle responsive design using a card layout on mobile */
+
+.table-wrapper {
+    .table-controls {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        &.table-controls--bottom {
+            margin-top: 1rem;
+        }
+        .add-new:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+    .table-search {
+        margin-left: auto;
+        input {
+            min-width: 300px;
+            border-color: transparent;
+            background-color: lighten($black, 85%);
+        }
+    }
+    .table-pagination {
+        .btn {
+            font-weight: bold;
+            border-radius: 0.3rem;
+            &:not(:last-child) {
+                margin-right: 0.6rem;
+            }
+        }
+    }
+}

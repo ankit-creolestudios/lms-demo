@@ -1,0 +1,9 @@
+.bundle-card {
+    .card-body header .select-search {
+        flex: 1;
+
+        &__select {
+            max-height: 100px;
+        }
+    }
+}

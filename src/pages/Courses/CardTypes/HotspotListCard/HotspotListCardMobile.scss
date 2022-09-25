@@ -1,0 +1,65 @@
+.lesson-cards__hotspot-list-type {
+    &__header {
+        & > h1 {
+            font-size: 24px;
+        }
+
+        & > h3 {
+            font-size: 20px;
+        }
+    }
+
+    &--vertical {
+        .lesson-cards__hotspot-list-type {
+            &__activeItemContent {
+                height: 0px;
+                padding-left: 8px;
+            }
+
+            &__hotspotContent {
+                flex-direction: column;
+            }
+
+            &__list {
+                background-color: $white;
+                flex-direction: row;
+                overflow-x: auto;
+                align-items: flex-start;
+                transform: rotateX(180deg);
+                padding: 35px 20px 15px 20px;
+                direction: ltr;
+
+                &__item {
+                    margin: auto;
+                    transform: rotateX(180deg);
+                    padding: 5px;
+
+                    & > img {
+                        margin-bottom: 10px;
+                    }
+
+                    &[data-manysiblings="true"] {
+                        margin: 0 17px;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+
+                    .hotspotIcon {
+                        box-shadow: 0 0 10px #fff;
+                        right: unset;
+                        top: unset;
+                        bottom: -25px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}

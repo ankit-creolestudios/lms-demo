@@ -1,0 +1,46 @@
+.cmenu {
+    &-item {
+        &:not(:last-child) {
+            border-bottom: 1px solid lighten($light-gray, 40%);
+        }
+
+        &__toggle {
+            $transition-duration: 0.15s;
+
+            display: flex;
+            padding: 15px;
+            color: darken($light-gray, 9.5);
+            transition: color $transition-duration ease-out;
+            cursor: pointer;
+
+            & > svg {
+                color: lighten($light-gray, 36);
+                font-size: 22px;
+                transform: rotateX(0deg);
+                transition: transform $transition-duration ease-out, color $transition-duration ease-out;
+            }
+
+            &--open {
+                color: $black;
+
+                & > svg {
+                    transform: rotateX(180deg);
+                    color: $black;
+                }
+            }
+        }
+
+        &__title {
+            flex: 1;
+            max-width: calc(100% - 22px);
+            display: flex;
+            flex-direction: column;
+
+            & > span {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}

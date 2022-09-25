@@ -1,0 +1,13 @@
+.capitalisation-option {
+    display: flex;
+    flex-wrap: wrap;
+
+    .toggle-option {
+        display: flex;
+        align-items: center;
+        flex-basis: 25%;
+        label {
+            padding-left: 10px;
+        }
+    }
+}

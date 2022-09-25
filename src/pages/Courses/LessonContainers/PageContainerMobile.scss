@@ -1,0 +1,146 @@
+.course-layout.page-layout {
+    .lesson-page {
+        transform: translateX(0);
+        max-width: 100vw;
+        height: calc(100vh - 48px);
+        overflow: hidden;
+
+        &__content {
+            padding-bottom: 48px;
+            transform: translateY(68px);
+
+            & > main {
+                max-width: 100vw;
+
+                &.lesson-cards {
+                    &__document-type {
+                        height: calc(100vh - 156px);
+
+                        iframe {
+                            height: calc(100vh - 144px);
+                        }
+                    }
+
+                    &__image-type {
+                        max-width: calc(100% - 5px);
+                    }
+                }
+            }
+        }
+
+        &__footer {
+            height: 48px;
+
+            & > div {
+                padding: 0 10px;
+            }
+
+            .lesson-timer {
+                & > span:first-child {
+                    display: none;
+                }
+            }
+
+            .lesson-button {
+                &--previous {
+                    font-size: 0;
+                    padding: 0 12.5px;
+                    left: 48px;
+
+                    svg {
+                        display: block;
+                        font-size: 14px;
+                    }
+                }
+
+                &--next {
+                    right: 10px;
+                }
+            }
+        }
+
+        &--menu-open {
+            .cmenu-toggle {
+                transform: translateX($cmenu);
+            }
+
+            .lesson-button--next {
+                opacity: 0.3;
+                pointer-events: none;
+            }
+
+            .lesson-page__content {
+                opacity: 0.3;
+                pointer-events: none;
+            }
+        }
+
+        &--animate {
+            .cmenu-toggle {
+                transition: transform 0.2s ease-out;
+            }
+
+            .lesson-button--next {
+                transition: opacity 0.2s ease-out;
+            }
+
+            .lesson-page__content {
+                transition: opacity 0.2s ease-out;
+            }
+        }
+
+        &__breadcrumb {
+            position: absolute;
+            padding-right: 48px;
+
+            & > span {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: calc((100% - 53px) / 2);
+            }
+        }
+
+        .lesson-status {
+            width: 48px;
+            height: 48px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            & > span {
+                visibility: hidden;
+                position: absolute;
+                left: calc((48px - 1ch) / 2);
+
+                &:first-letter {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .cmenu--page {
+        transform: translateX(-$cmenu);
+
+        &--open {
+            transform: translateX(0);
+        }
+
+        &--animate {
+            transition: transform 0.2s ease-out;
+        }
+    }
+
+    .cmenu-toggle {
+        display: flex;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+}

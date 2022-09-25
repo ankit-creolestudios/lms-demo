@@ -1,0 +1,177 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    & > header {
+        display: flex;
+        align-items: center;
+        z-index: 9999;
+        border: 1px solid rgba(133, 133, 133, 0.125);
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        height: 54px;
+        padding: 0 40px;
+        overflow-x: hidden;
+        @media (max-width: $default-breakpoint) {
+            padding: 0 20px;
+        }
+        .logo-img {
+            height: 30px;
+        }
+        #user-bar {
+            display: flex;
+            align-items: center;
+            height: 100%;
+
+            @media (max-width: $default-breakpoint) {
+                background-color: white;
+                position: absolute;
+                right: 20px;
+                z-index: 1;
+                padding-right: 31px;
+                overflow-x: hidden;
+                width: 31px;
+                transition: width 0.2s ease-out, box-shadow 0.2s ease-out;
+                box-shadow: 0 0 0px 0px white;
+                &::before {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    background-image: url("data:image/svg+xml,%3Csvg stroke='%2325255e' fill='%2325255e' stroke-width='0' viewBox='0 0 512 512' height='1em' width='1em' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z'%3E%3C/path%3E%3C/svg%3E");
+                    background-color: transparent;
+                    height: 28px;
+                    width: 28px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 14px 14px;
+                    border-radius: 3px;
+                    z-index: 2;
+                    transition: background-image 0s 0.2s ease-out, background-color 0.35s 0.15s ease-out;
+                }
+                & > a {
+                    pointer-events: none;
+                    transition: pointer-events 0s 0.2s linear;
+                    svg {
+                        transform: scale(0);
+                        transition: transform 0.25s ease-out;
+                    }
+                }
+                &.active {
+                    width: 187px;
+                    box-shadow: 0 0 30px 60px white;
+                    &::before {
+                        background-image: url("data:image/svg+xml,%3Csvg stroke='%2325255e' fill='%2325255e' stroke-width='0' viewBox='0 0 24 24' height='1em' width='1em' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' stroke='%2325255e' stroke-width='2' d='M3,3 L21,21 M3,21 L21,3'%3E%3C/path%3E%3C/svg%3E");
+                        background-color: $brand-cyan;
+                    }
+                    & > a {
+                        pointer-events: auto;
+                        transition: pointer-events 0s 0s linear;
+                        svg {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+            .user-bar__action {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                height: 2rem;
+                width: 2rem;
+                border-radius: 0.25rem;
+                background-color: transparent;
+                transition: all 0.2s ease-out;
+                font-size: 1rem;
+                color: $brand-blue;
+                cursor: pointer;
+                &:hover {
+                    background-color: $brand-cyan;
+                    .user-bar__action__notification {
+                        opacity: 0;
+                    }
+                }
+                &:not(:last-child) {
+                    margin-right: 3px;
+                }
+                .user-bar__action__notification {
+                    $size: 0.85rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: $size;
+                    width: $size;
+                    position: absolute;
+                    top: 1px;
+                    right: 2px;
+                    color: $white;
+                    font-weight: bold;
+                    border-radius: 1rem;
+                    font-size: 0.65rem;
+                    background-color: $brand-cyan;
+                    opacity: 1;
+                    transition: opacity 0.2s ease-out;
+                }
+            }
+        }
+    }
+    @media (max-width: $default-breakpoint) {
+        & > header {
+            .logo-img {
+                height: 20px;
+            }
+        }
+    }
+    & > main {
+        flex: 1;
+        padding-top: 54px;
+    }
+}
+.verify-email {
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    & > .alert {
+        border-radius: 0;
+        margin-bottom: 0;
+
+        .alert-heading.h4 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        & > p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+
+            & > b {
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        & > header {
+            height: 48px;
+        }
+
+        & > main {
+            padding-top: 48px;
+        }
+    }
+}

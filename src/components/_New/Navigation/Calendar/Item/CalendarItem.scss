@@ -1,0 +1,22 @@
+@import '../CalendarSharedStyles.scss';
+
+.calendar-item {
+    @extend %default-icon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    &:hover {
+        cursor: pointer;
+    }
+    span {
+        font-size: 14px;
+        transform: translateY(-1px);
+        user-select: none;
+    }
+    i {
+        font-size: 80%;
+        // transform: translateY(1px);
+    }
+}

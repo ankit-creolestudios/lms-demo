@@ -1,0 +1,10 @@
+.text-input-component-char-count {
+    padding-right: 55px !important;
+}
+span.char-counter {
+    position: absolute;
+    transform: translate(-40px, 10px);
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}

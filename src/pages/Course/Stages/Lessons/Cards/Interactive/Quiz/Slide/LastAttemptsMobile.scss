@@ -1,0 +1,10 @@
+.last-attempts {
+    &__items {
+        .last-attempts__item {
+            flex-wrap: wrap;
+            .last-attempts__item__buttons {
+                margin-top: 10px;
+            }
+        }
+    }
+}

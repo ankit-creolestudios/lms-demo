@@ -1,0 +1,166 @@
+.checkout-summary {
+    width: 100%;
+    margin-bottom: 55px;
+    .heading {
+        font: normal normal 600 30px/37px Poppins;
+        color: $brand-blue;
+        text-align: center;
+        @include respond(phone) {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+    .products {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        max-width: 82rem;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+        @include respond(phone) {
+            width: 100%;
+            justify-content: center;
+        }
+        .product {
+            display: flex;
+            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+            h3 {
+                font-family: inherit;
+                font-size: 16px;
+                line-height: 18px;
+                font-weight: 600;
+                color: $brand-blue;
+                @include respond(phone) {
+                    font-size: 14px;
+                    line-height: 22px;
+                    max-width: 75%;
+                    padding: 0 5px;
+                }
+            }
+            img {
+                width: 112px;
+                height: 148px;
+                object-fit: cover;
+                border-radius: 3px;
+                @include respond(phone) {
+                    width: 25%;
+                    height: 120px;
+                    margin-right: 5px;
+                }
+            }
+            .details {
+                padding: 15px 25px;
+                overflow: hidden;
+                flex-grow: 1;
+                @include respond(phone) {
+                    padding: 15px 15px;
+                }
+                .details-row {
+                    display: flex;
+                    justify-content: space-between;
+                    .price {
+                        color: $ebony-clay;
+                        font-weight: 600;
+                        .old {
+                            font-weight: normal;
+                            text-decoration: line-through;
+                            color: $black;
+                            margin-left: 6px;
+                        }
+                    }
+                    .tax-label,
+                    .tax-value {
+                        font-size: 14px;
+                        line-height: 16px;
+                        font-weight: normal;
+                        color: #1d1d1d;
+                        @include respond(phone) {
+                            font-size: 14px;
+                            line-height: 22px;
+                            max-width: 167px;
+                        }
+                    }
+                }
+            }
+            .order-package-controls {
+                padding: 15px 0;
+                font-size: 20px;
+                & > .delete {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $mid-gray;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 20px;
+                    color: darken($mid-gray, 35);
+                    cursor: pointer;
+                }
+            }
+        }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid $mid-dark-gray;
+            padding-top: 10px;
+            margin-top: 30px;
+
+            @include respond(phone) {
+                align-items: flex-start;
+            }
+            .label {
+                color: #1d1d1d;
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 37px;
+                .coupon-wrapper {
+                    @include respond(phone) {
+                        display: block;
+                    }
+                    .coupon-link {
+                        color: $blue;
+                        font-weight: normal;
+                        text-decoration: underline;
+                        line-height: 37px;
+                        user-select: none;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    .coupon-input {
+                        display: inline-flex;
+                        & > input {
+                            font-size: 13px;
+                            padding: 5px 8px;
+                            width: 160px;
+                        }
+                        & > button {
+                            font-size: 13px;
+                            padding: 0px 18px;
+                            margin-left: 10px;
+                            height: 31.5px;
+                        }
+                    }
+                }
+            }
+            .value {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 37px;
+                color: $brand-blue;
+            }
+        }
+        .tax-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+        }
+    }
+}

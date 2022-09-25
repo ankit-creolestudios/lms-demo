@@ -1,0 +1,33 @@
+.page-controls {
+	margin-bottom: 1.25rem;
+}
+
+.card-body > p {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.messages-list {
+
+	.accordion:not(:last-child) {
+		margin-bottom: .75rem;
+	}
+
+	.card-header {
+		display: flex;
+		align-items: center;
+
+		.card-title {
+			flex: 1;
+			margin: 0;
+		}
+
+		.card-controls {
+
+			.btn:not(:last-child) {
+				margin-right: .5rem;
+			}
+		}
+	}
+}

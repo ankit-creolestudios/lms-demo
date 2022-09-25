@@ -1,0 +1,59 @@
+.navigation-lesson {
+    display: flex;
+    height: 65px;
+    align-items: center;
+    padding: 0 15px;
+    &.available:hover {
+        cursor: pointer;
+        background-color: lighten($blue, 56%);
+    }
+    &:not(:first-child) {
+        position: relative;
+        .icon-container {
+            &::before {
+                content: '';
+                position: absolute;
+                height: 34px;
+                width: 1px;
+                transform: translateY(-32px);
+                background-color: $mid-gray;
+            }
+            &.active::before {
+                background-color: $brand-cyan;
+            }
+
+            &.completed::before {
+                background-color: $brand-cyan-light;
+            }
+        }
+    }
+    .icon-container {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 40px;
+        background-color: $mid-gray;
+        &.active {
+            background-color: $brand-cyan;
+        }
+        &.completed {
+            background-color: $brand-cyan-light;
+        }
+        svg {
+            height: 18px;
+            width: 18px;
+        }
+    }
+    span {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        max-height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

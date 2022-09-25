@@ -1,0 +1,79 @@
+.lesson-slide-header {
+    width: 100%;
+    display: flex;
+    align-items: left;
+    
+    header {
+        width: 100%
+    }
+
+    & > header > h3 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    & > header > div > h5 {
+        font-size: 16px;
+        color: $light-gray;
+    }
+
+    > i {
+        display: none;
+    }
+    @media screen and (max-width: 1200px) {
+        // position: fixed;
+        // top: 48px;
+        // z-index: 300;
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba($blue, 0.1);
+            position: relative;
+            height: 48px;
+
+            & > h3,
+            & > div > h5 {
+                display: block;
+                font-size: 14px;
+                color: $light-gray;
+                font-weight: normal;
+                margin: 0;
+                max-width: calc(100% - 220px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        // > i {
+        //     display: block;
+        //     margin-right: 20px;
+
+        //     & > svg {
+        //         width: 25px;
+        //         height: 25px;
+        //     }
+        //     &:hover {
+        //         cursor: pointer;
+        //     }
+        // }
+    }
+
+    > span {
+        > i {
+            margin: 0 10px;
+        }
+    }
+    .lesson-name {
+        display: inline;
+    }
+    .lesson-timer {
+        float:right;
+    }
+}
+
+header:empty {
+    display: none;
+}

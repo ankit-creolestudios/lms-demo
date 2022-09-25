@@ -1,0 +1,25 @@
+.hotspot-map-card {
+    & > div {
+        margin-bottom: 15px;
+
+        & > small {
+            display: block;
+            margin-top: 5px;
+            color: $light-gray;
+
+            & > p {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .set-hotspots {
+        border: solid 2px #f0f0f0;
+        border-radius: 50px;
+        padding: 5px 20px;
+        font-weight: bold;
+        &:hover {
+            border: solid 2px $brand-blue;
+        }
+    }
+}

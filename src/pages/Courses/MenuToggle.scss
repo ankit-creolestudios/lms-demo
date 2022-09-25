@@ -1,0 +1,12 @@
+.cmenu-toggle {
+    color: $brand-blue;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    user-select: none;
+    z-index: 11;
+    cursor: pointer;
+}
